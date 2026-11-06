@@ -1,0 +1,15 @@
+# Reference source: keep out of this repository.
+/ACSSM-reference/
+
+# Local credentials and agent configuration.
+/.aws/
+/.codex/
+/.agents/
+.env
+.env.*
+!.env.example
+
+# Generated notebook and Python files.
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
