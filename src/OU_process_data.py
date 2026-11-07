@@ -88,12 +88,9 @@ def make_ou_data(
         obs_mask[:, :2] = True
 
         """
-        at first, use unsqueeze to make extra dim ( 128, 40 ) -> (128, 40, 1)
-        ( -1 : add another dim at the last position )
-
-        then repeat ( expand ) using this tensor  (128, 40, 1) -> (128, 40, 3)
-
-        expand (-1,-1, 3) : maintain the dim of the row and col. and expand the dim of last dim.
+        1. make obs_mask (128,40,) -> (128,40,1)
+        2. obs stores the target tensor (128,40,3) where the obs_mask is true
+        3. if the obs_mask is false, then obs stores 0 value to that position.
         """
         obs = torch.where(
                 obs_mask.unsqueeze(-1),
@@ -102,6 +99,11 @@ def make_ou_data(
         )
 
 
+        """     times.type : (128,40)
+                obs.type = target.type: (128,40,3)
+                obs_mask.type = target_mask.type : (128,40)
+
+        """
         dataset = {
                 "times" : times,
                 "observation" : obs,
