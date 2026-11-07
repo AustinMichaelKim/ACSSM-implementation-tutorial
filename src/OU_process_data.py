@@ -10,7 +10,7 @@ def make_ou_data(
         sigma : torch.Tensor | None = None,
         obs_std : float = 0.1, 
         seed: int =42 
-        ) -> dict:
+        ) -> dict[str,torch.Tensor]:
 
 
         # create tensors for K, mu, G 
@@ -46,7 +46,7 @@ def make_ou_data(
         mu_expand = mu.unsqueeze(0).expand(n_series,-1)
 
 
-        x[:,0,:] = mu_expand + torch.sqrt( sigma_expand**2 / 2*a_expand ) * torch.randn(n_series,dim, generator=g)
+        x[:,0,:] = mu_expand + torch.sqrt( sigma_expand**2 / (2*a_expand) ) * torch.randn(n_series,dim, generator=g)
 
 
         for t_i in range(n_times-1):
