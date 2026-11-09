@@ -27,29 +27,39 @@ This tutorial is intended to make simple implementation and to dissect the main 
 
 1.[✅] **Data Generation for simple implementation _ OU process** 
 
-    - Generate simple example data for tutorial
+- Generate simple example data for tutorial
+
+
 
 2.[✅] **Encoder and Transformer**
 
-    - Encode the observed data to get the sampled latent observation.
+- Encode the observed data to get the sampled latent observation.
 
-    - Implement transformer to encodes the latent observation to get context vector.
+- Implement transformer to encodes the latent observation to get context vector.
+
+
 
 3.[✅] **Local Linear Approximation model**
 
-    - Model the linear SDE for the given process and implement neural net for drift and control
+- Model the linear SDE for the given process and implement neural net for drift and control
+
+
 
 4.[❌] **Parellel Scan algorithm**
 
-    - Implement efficient evaluation of the moments $m_t, \Sigma_t$ s.t $X_t \sim \mathcal{N}(m_t,\Sigma_t)$
+- Implement efficient evaluation of the moments $m_t, \Sigma_t$ s.t $X_t \sim \mathcal{N}(m_t,\Sigma_t)$
+
+
 
 5.[❌] **Optimizing ELBO and divergence**
 
-    - Define the objective loss and optimize
+- Define the objective loss and optimize
+
+
 
 6.[❌] **Result and apply**
 
-    - Compare the result to the paper and apply to this algorithm to another dataset
+- Compare the result to the paper and apply to this algorithm to another dataset
 
 ## License
 
