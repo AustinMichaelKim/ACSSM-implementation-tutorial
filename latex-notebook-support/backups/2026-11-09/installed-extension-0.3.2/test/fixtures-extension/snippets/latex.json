@@ -1,8 +1,0 @@
-{
- "Display":{"prefix":"dm","body":["\\[","    $1","\\]","$0"]},
- "Theta":{"prefix":";th","body":"\\theta{}$0"},
- "Partial derivative":{"prefix":"pd","body":"\\frac{\\partial ${1:f}}{\\partial ${2:x}}$0"},
- "Bold":{"prefix":"bv","body":"\\bm{$1}$0"},
- "Fraction":{"prefix":"ff","body":"\\frac{${1:numerator}}{${2:denominator}}${3}$0"},
- "Parentheses":{"prefix":"lrp","body":"\\left(${1}\\right)${2}$0"}
-}
