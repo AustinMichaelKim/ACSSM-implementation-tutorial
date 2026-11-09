@@ -1,5 +1,5 @@
 # ACSSM-implementation-tutorial
-This repository is tutorial for implementing the paper "Amortized Control of Continuous State Space Feynman-Kac Model for Irregular Time Series" by Park et.al , ICLR 25
+This repository is tutorial for non-official implementaiton of the paper "Amortized Control of Continuous State Space Feynman-Kac Model for Irregular Time Series" by Park et.al , ICLR 25
 
 
 ## References and Attribution
@@ -15,13 +15,41 @@ ICLR 2025.
 - [Official Implementation](https://github.com/bw-park/ACSSM)
 
 
-Each tutorial includes:
-- Mathematical explanations of the algorithms
+Each tutorial notebook files includs:
+- Mathematical explanations of the algorithms.
 - Step-by-step pytorch implementations ( with simple examples )
 - Code annotations and implementation notes
 
-This tutorial is not intended for full implementation as you can check the official reference, rather make simple implementation to understand the main algorithm of the paper.
+This tutorial is intended to make simple implementation and to dissect the main algorithm of the paper in more concise way.
 
+
+## Current Implementation Step
+
+1.[✅] **Data Generation for simple implementation _ OU process** 
+
+    - Generate simple example data for tutorial
+
+2.[✅] **Encoder and Transformer**
+
+    - Encode the observed data to get the sampled latent observation.
+
+    - Implement transformer to encodes the latent observation to get context vector.
+
+3.[✅] **Local Linear Approximation model**
+
+    - Model the linear SDE for the given process and implement neural net for drift and control
+
+4.[❌] **Parellel Scan algorithm**
+
+    - Implement efficient evaluation of the moments $m_t, \Sigma_t$ s.t $X_t \sim \mathcal{N}(m_t,\Sigma_t)$
+
+5.[❌] **Optimizing ELBO and divergence**
+
+    - Define the objective loss and optimize
+
+6.[❌] **Result and apply**
+
+    - Compare the result to the paper and apply to this algorithm to another dataset
 
 ## License
 

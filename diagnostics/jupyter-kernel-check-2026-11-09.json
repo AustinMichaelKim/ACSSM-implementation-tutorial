@@ -1,0 +1,140 @@
+{
+  "checkedAt": "2026-11-09T16:47:24.945766+09:00",
+  "project": "/home/minseok/paper_implementation/ACSSM_implementation",
+  "method": "Read-only process/environment inspection and kernel_info requests. No execution, restart, interrupt or shutdown sent to existing kernels.",
+  "jupyterLog": "/home/minseok/.vscode-server/data/logs/20261109T104043/exthost1/output_logging_20261109T104049/1-Jupyter.log",
+  "timeline": [
+    {
+      "line": 155,
+      "text": "16:35:12.847 [info] Starting Kernel (Python Path: ~/miniconda3/envs/acssm/bin/python, Conda, 3.12.16) for '~/paper_implementation/ACSSM_implementation/test.ipynb' (disableUI=true)"
+    },
+    {
+      "line": 156,
+      "text": "16:35:17.670 [info] Process Execution: ~/miniconda3/envs/acssm/bin/python -m pip list"
+    },
+    {
+      "line": 157,
+      "text": "16:35:17.690 [info] Process Execution: ~/miniconda3/envs/acssm/bin/python -c \"import ipykernel; print(ipykernel.__version__); print(\"5dc3a68c-e34e-4080-9c3e-2a532b2ccb4d\"); print(ipykernel.__file__)\""
+    },
+    {
+      "line": 158,
+      "text": "16:35:17.707 [info] Process Execution: ~/miniconda3/envs/acssm/bin/python -Xfrozen_modules=off -m ipykernel_launcher --f=/run/user/1000/jupyter/runtime/kernel-v3bf4ab00a0c759881a1d7deff355b1b0562d45066.json"
+    },
+    {
+      "line": 160,
+      "text": "16:39:40.396 [info] Restart requested ~/paper_implementation/ACSSM_implementation/test.ipynb"
+    },
+    {
+      "line": 161,
+      "text": "16:44:15.296 [info] Kernel successfully started"
+    },
+    {
+      "line": 162,
+      "text": "16:44:15.404 [info] Process Execution: ~/miniconda3/envs/acssm/bin/python -c \"import ipykernel; print(ipykernel.__version__); print(\"5dc3a68c-e34e-4080-9c3e-2a532b2ccb4d\"); print(ipykernel.__file__)\""
+    },
+    {
+      "line": 163,
+      "text": "16:44:15.470 [info] Process Execution: ~/miniconda3/envs/acssm/bin/python -Xfrozen_modules=off -m ipykernel_launcher --f=/run/user/1000/jupyter/runtime/kernel-v3bc2cc6a6432886369de0898527d829392c96b1af.json"
+    },
+    {
+      "line": 165,
+      "text": "16:44:16.122 [info] Restarted ca73e25a-1e09-44f2-841c-cb0151fde556"
+    }
+  ],
+  "kernels": [
+    {
+      "pid": 87141,
+      "notebook": "3_locally_linear_approximation.ipynb",
+      "python": "/home/minseok/miniconda3/envs/acssm/bin/python",
+      "cwd": "/home/minseok/paper_implementation/ACSSM_implementation",
+      "connectionFile": "kernel-v34ebb0a4b3640c9e95baee3226f2a71b659900706.json",
+      "PYTHONNOUSERSITE": "1",
+      "response": "kernel_info_reply",
+      "responseSeconds": 0.0198
+    },
+    {
+      "pid": 131465,
+      "notebook": "4_Transition_SDE_parallel_scan.ipynb",
+      "python": "/home/minseok/miniconda3/envs/acssm/bin/python",
+      "cwd": "/home/minseok/paper_implementation/ACSSM_implementation",
+      "connectionFile": "kernel-v3da339456ec4445a1af709d63cb23a38c1f63f0ba.json",
+      "PYTHONNOUSERSITE": "1",
+      "response": "kernel_info_reply",
+      "responseSeconds": 0.0122
+    },
+    {
+      "pid": 131576,
+      "notebook": "2_encoder_transformer.ipynb",
+      "python": "/home/minseok/miniconda3/envs/acssm/bin/python",
+      "cwd": "/home/minseok/paper_implementation/ACSSM_implementation",
+      "connectionFile": "kernel-v35b7ff385f84fd1f0e3694ccd959817c22a03b69a.json",
+      "PYTHONNOUSERSITE": "1",
+      "response": "kernel_info_reply",
+      "responseSeconds": 0.0057
+    },
+    {
+      "pid": 135331,
+      "notebook": "test.ipynb",
+      "python": "/home/minseok/miniconda3/envs/acssm/bin/python",
+      "cwd": "/home/minseok/paper_implementation/ACSSM_implementation",
+      "connectionFile": "kernel-v3bc2cc6a6432886369de0898527d829392c96b1af.json",
+      "PYTHONNOUSERSITE": "1",
+      "response": "kernel_info_reply",
+      "responseSeconds": 0.017
+    }
+  ],
+  "jupyterServers": [],
+  "versions": {
+    "ipykernel": {
+      "version": "7.3.0",
+      "path": "/home/minseok/miniconda3/envs/acssm/lib/python3.12/site-packages/ipykernel/__init__.py"
+    },
+    "jupyter_client": {
+      "version": "8.10.0",
+      "path": "/home/minseok/miniconda3/envs/acssm/lib/python3.12/site-packages/jupyter_client/__init__.py"
+    },
+    "IPython": {
+      "version": "9.17.1",
+      "path": "/home/minseok/miniconda3/envs/acssm/lib/python3.12/site-packages/IPython/__init__.py"
+    },
+    "zmq": {
+      "version": "27.2.0",
+      "path": "/home/minseok/miniconda3/envs/acssm/lib/python3.12/site-packages/zmq/__init__.py"
+    }
+  },
+  "secondaryIssue": {
+    "userSiteShadowsCondaWithoutIsolation": true,
+    "actualKernelsAlreadyExcludeUserSite": true,
+    "zeroByteFiles": [
+      {
+        "path": "/home/minseok/.local/lib/python3.12/site-packages/ipykernel/__init__.py",
+        "size": 0
+      },
+      {
+        "path": "/home/minseok/.local/lib/python3.12/site-packages/ipykernel_launcher.py",
+        "size": 0
+      },
+      {
+        "path": "/home/minseok/.local/lib/python3.12/site-packages/ipykernel/kernelapp.py",
+        "size": 0
+      },
+      {
+        "path": "/home/minseok/.local/lib/python3.12/site-packages/jupyter_client/__init__.py",
+        "size": 0
+      },
+      {
+        "path": "/home/minseok/.local/lib/python3.12/site-packages/jupyter_server/__init__.py",
+        "size": 0
+      }
+    ]
+  },
+  "isolatedTemporaryKernelTest": {
+    "readySeconds": 1.013,
+    "independentClientSessions": true,
+    "sharedValueWrittenByAReadByB": 37,
+    "cwd": "/home/minseok/paper_implementation/ACSSM_implementation",
+    "cleanedUp": true,
+    "scope": "Jupyter protocol clients; two VS Code notebook UIs were not driven."
+  },
+  "configurationChanged": false
+}

@@ -1,0 +1,790 @@
+{
+  "date": "2026-11-09",
+  "method": "Static audit of installed Windows workbench and registered extension manifests, current user keybindings and settings. No physical key replay or live context inspection.",
+  "version": "1.145.2",
+  "commit": "c4453f8ea430795f941c1b2ff6c9321135a74a02",
+  "bundle": "/mnt/c/Users/p1072/AppData/Local/Programs/Microsoft VS Code/c4453f8ea4/resources/app/out/vs/workbench/workbench.desktop.main.js",
+  "bundleSha256": "8bd0d70cda8542f514a45534a14860ea48ddf39f149036838aebfcf2cc6ba02a",
+  "configuration": {
+    "/mnt/c/Users/p1072/AppData/Roaming/Code/User/keybindings.json": {
+      "sha256": "4766c1250a3f8760e0a561a9b3341601e4c6f29ad464e802eae020692b8cf5b8",
+      "value": [
+        {
+          "key": "ctrl+oem_7",
+          "command": "workbench.action.terminal.toggleTerminal",
+          "when": "terminal.active"
+        },
+        {
+          "key": "ctrl+oem_3",
+          "command": "-workbench.action.terminal.toggleTerminal",
+          "when": "terminal.active"
+        },
+        {
+          "key": "ctrl+shift+oem_7",
+          "command": "workbench.action.terminal.new",
+          "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+        },
+        {
+          "key": "ctrl+shift+oem_3",
+          "command": "-workbench.action.terminal.new",
+          "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+        },
+        {
+          "key": "ctrl+oem_1",
+          "command": "workbench.action.toggleMaximizedPanel",
+          "when": "panelAlignment == 'center' || panelPosition != 'bottom' && panelPosition != 'top'"
+        },
+        {
+          "key": "ctrl+b",
+          "command": "latex-workshop.build",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused)"
+        },
+        {
+          "key": "ctrl+alt+p",
+          "command": "workbench.action.toggleWindowAlwaysOnTop"
+        },
+        {
+          "key": "alt+-",
+          "command": "latexSmartTab.insertSnippetTemplate",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly",
+          "args": {
+            "snippet": "_{$1}$0"
+          }
+        },
+        {
+          "key": "alt+1",
+          "command": "latexSmartTab.insertSnippetTemplate",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly",
+          "args": {
+            "snippet": "^{$1}$0"
+          }
+        },
+        {
+          "key": "alt+2",
+          "command": "latexSmartTab.insertSnippetTemplate",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly",
+          "args": {
+            "snippet": "^{2}$0"
+          }
+        },
+        {
+          "key": "alt+3",
+          "command": "latexSmartTab.insertSnippetTemplate",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly",
+          "args": {
+            "snippet": "^{3}$0"
+          }
+        },
+        {
+          "key": "ctrl+b",
+          "command": "latex-workshop.build",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused)"
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigatePlain",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && !editorTabMovesFocus && !hasSnippetCompletions && !inSnippetMode"
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigateSnippet",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && !editorTabMovesFocus && !hasSnippetCompletions && inSnippetMode && hasNextTabstop"
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.expandSnippet",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && !editorTabMovesFocus && hasSnippetCompletions"
+        },
+        {
+          "key": "space",
+          "command": "latexSmartTab.insertContinuationSpace",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && inSnippetMode && editorHasSelection && config.latexSmartTab.preserveUntouchedTerminalDefaultOnSpace"
+        },
+        {
+          "key": "ctrl+d ctrl+s",
+          "command": "editor.action.insertSnippet",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused)",
+          "args": {
+            "snippet": "% !TeX program = xelatex\n\\documentclass[11pt,a4paper]{article}\n\n% ---------- Language and layout ----------\n\\usepackage[margin=25mm]{geometry}\n\\usepackage{microtype}\n\\usepackage{setspace}\n\\setstretch{1.15}\n\\setlength{\\parindent}{0pt}\n\\setlength{\\parskip}{0.5em}\n\n% ---------- Mathematics ----------\n\\usepackage{amsmath,amssymb,amsthm,mathtools}\n\\usepackage{bm}\n\\allowdisplaybreaks\n\\numberwithin{equation}{section}\n\\usepackage[version=4]{mhchem}\n\n% ---------- Figures and tables ----------\n\\usepackage{graphicx}\n\\usepackage{booktabs}\n\\usepackage{array}\n\\usepackage{enumitem}\n\n% ---------- Links ----------\n\\usepackage{xcolor}\n\\usepackage{hyperref}\n\\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}\n\n% ---------- Operators and commands ----------\n\\DeclareMathOperator{\\Var}{Var}\n\\DeclareMathOperator{\\Cov}{Cov}\n\\DeclareMathOperator{\\Corr}{Corr}\n\\DeclareMathOperator{\\rank}{rank}\n\\DeclareMathOperator{\\tr}{tr}\n\\DeclareMathOperator*{\\argmin}{arg\\,min}\n\\DeclareMathOperator*{\\argmax}{arg\\,max}\n\\newcommand{\\E}{\\mathbb{E}}\n\\newcommand{\\Prob}{\\mathbb{P}}\n\\newcommand{\\R}{\\mathbb{R}}\n\\newcommand{\\Q}{\\mathbb{Q}}\n\\newcommand{\\dd}{\\,\\mathrm{d}}\n\\newcommand{\\ind}{\\mathbf{1}}\n\\newcommand{\\pd}[2]{\\frac{\\partial #1}{\\partial #2}}\n\\DeclarePairedDelimiter{\\abs}{\\lvert}{\\rvert}\n\\DeclarePairedDelimiter{\\norm}{\\lVert}{\\rVert}\n\\DeclarePairedDelimiter{\\inner}{\\langle}{\\rangle}\n\n% ---------- Theorem environments ----------\n\\newtheorem{theorem}{Theorem}[section]\n\\newtheorem{lemma}[theorem]{Lemma}\n\\newtheorem{proposition}[theorem]{Proposition}\n\\theoremstyle{definition}\n\\newtheorem{definition}[theorem]{Definition}\n\\newtheorem{example}[theorem]{Example}\n\\theoremstyle{remark}\n\\newtheorem*{remark}{Remark}\n\n\\title{${1:문서 제목}}\n\\author{${2:작성자}}\n\\date{\\today}\n\n\\begin{document}\n\n\\maketitle\n\\tableofcontents\n\\newpage\n\n$0\n\n\\end{document}\n"
+          }
+        },
+        {
+          "key": "alt+-",
+          "command": "latexSmartTab.insertSnippetTemplate",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly",
+          "args": {
+            "snippet": "_{$1}$0"
+          }
+        },
+        {
+          "key": "alt+1",
+          "command": "latexSmartTab.insertSnippetTemplate",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly",
+          "args": {
+            "snippet": "^{$1}$0"
+          }
+        },
+        {
+          "key": "alt+2",
+          "command": "latexSmartTab.insertSnippetTemplate",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly",
+          "args": {
+            "snippet": "^{2}$0"
+          }
+        },
+        {
+          "key": "alt+3",
+          "command": "latexSmartTab.insertSnippetTemplate",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly",
+          "args": {
+            "snippet": "^{3}$0"
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigatePlain",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && !editorTabMovesFocus && !latexSmartTab.notebookHasSnippetCompletions && !inSnippetMode"
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigateSnippet",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && !editorTabMovesFocus && !latexSmartTab.notebookHasSnippetCompletions && inSnippetMode && hasNextTabstop"
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.expandSnippet",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && !editorTabMovesFocus && latexSmartTab.notebookHasSnippetCompletions && !inSnippetMode",
+          "args": {
+            "inSnippetMode": false
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.expandSnippet",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && !editorTabMovesFocus && latexSmartTab.notebookHasSnippetCompletions && inSnippetMode",
+          "args": {
+            "inSnippetMode": true
+          }
+        },
+        {
+          "key": "space",
+          "command": "latexSmartTab.insertContinuationSpace",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && inSnippetMode && editorHasSelection && config.latexSmartTab.preserveUntouchedTerminalDefaultOnSpace"
+        }
+      ]
+    },
+    "/mnt/c/Users/p1072/AppData/Roaming/Code/User/settings.json": {
+      "sha256": "c180236b8f6c9578d26d02451c9df32037ab91de49c6ad36fac1013ab539ce7c",
+      "value": {
+        "editor.fontSize": 18,
+        "editor.inlineSuggest.enabled": false
+      }
+    },
+    "/home/minseok/.vscode-server/data/Machine/settings.json": {
+      "sha256": "39494291a039d8f0daee7ba2672cfbd35cd1fe196bf58fcf7815e4fb845cca1e",
+      "value": {
+        "latexSmartTab.skipBlankChar": true,
+        "latexSmartTab.enableMultilineMode": true,
+        "latexSmartTab.recoverLongLineSnippetPrefixes": true,
+        "latexSmartTab.prefixProbeCharacters": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_;",
+        "latexSmartTab.closingTokens": [
+          "\\end{equation*}",
+          "\\end{equation}",
+          "\\end{align*}",
+          "\\end{aligned}",
+          "\\end{align}",
+          "\\end{bmatrix}",
+          "\\end{pmatrix}",
+          "\\end{vmatrix}",
+          "\\end{Vmatrix}",
+          "\\end{cases}",
+          "\\right\\rangle",
+          "\\right\\}",
+          "\\right)",
+          "\\right]",
+          "\\rangle",
+          "\\)",
+          "\\]",
+          "}",
+          ")",
+          "]",
+          "\\rfloor",
+          "\\rceil",
+          "\\rbrace",
+          "\\}",
+          "\\rvert",
+          "\\rVert",
+          "\\right|",
+          "\\right\\vert",
+          "\\right\\Vert",
+          "\\right."
+        ],
+        "latexSmartTab.exitBlockClosersToNextLine": true,
+        "latexSmartTab.blockClosingTokens": [
+          "\\]",
+          "\\end{displaymath}",
+          "\\end{equation*}",
+          "\\end{equation}",
+          "\\end{alignat*}",
+          "\\end{alignat}",
+          "\\end{align*}",
+          "\\end{align}",
+          "\\end{flalign*}",
+          "\\end{flalign}",
+          "\\end{gather*}",
+          "\\end{gather}",
+          "\\end{multline*}",
+          "\\end{multline}"
+        ],
+        "[latex]": {
+          "editor.wordWrap": "on",
+          "editor.tabCompletion": "onlySnippets",
+          "editor.acceptSuggestionOnEnter": "on",
+          "editor.acceptSuggestionOnCommitCharacter": false,
+          "editor.snippetSuggestions": "none",
+          "editor.suggest.snippetsPreventQuickSuggestions": false
+        },
+        "latexSmartTab.notebookSnippetSource": "/mnt/c/Users/p1072/AppData/Roaming/Code/User/snippets/latex.json"
+      }
+    },
+    "/home/minseok/paper_implementation/ACSSM_implementation/.vscode/settings.json": {
+      "sha256": "7c6e4672bbe1cd7e52fd1fbae824b94ee0f8ab6338d441f30f804c4a4e6c1d30",
+      "value": {}
+    }
+  },
+  "extensions": [
+    {
+      "id": "gaspardruan.taboutx",
+      "version": "0.4.1",
+      "manifest": "/home/minseok/.vscode-server/extensions/gaspardruan.taboutx-0.4.1/package.json",
+      "bindings": [
+        {
+          "command": "taboutx",
+          "key": "tab",
+          "when": "editorTextFocus && !inlineEditIsVisible && !suggestWidgetVisible && !inlineSuggestionVisible  && !editorHasMultipleSelections && !inSnippetMode"
+        },
+        {
+          "command": "taboutxBack",
+          "key": "shift+tab",
+          "when": "editorTextFocus && !inlineEditIsVisible && !suggestWidgetVisible && !inlineSuggestionVisible  && !editorHasMultipleSelections && !inSnippetMode"
+        }
+      ],
+      "markdownDefaults": null,
+      "relevantCommands": []
+    },
+    {
+      "id": "James-Yu.latex-workshop",
+      "version": "10.20.0",
+      "manifest": "/home/minseok/.vscode-server/extensions/james-yu.latex-workshop-10.20.0/package.json",
+      "bindings": [
+        {
+          "command": "latex-workshop.onEnterKey",
+          "key": "enter",
+          "when": "config.latex-workshop.bind.enter.key && editorTextFocus && acceptSuggestionOnEnter && !suggestWidgetVisible && !editorReadonly && editorLangId =~ /^latex$|^context$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/ && vim.active && vim.mode == 'Insert'"
+        },
+        {
+          "command": "latex-workshop.onEnterKey",
+          "key": "enter",
+          "when": "config.latex-workshop.bind.enter.key && editorTextFocus && !acceptSuggestionOnEnter && !editorReadonly && editorLangId =~ /^latex$|^context$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/ && vim.active && vim.mode == 'Insert'"
+        },
+        {
+          "command": "latex-workshop.onEnterKey",
+          "key": "enter",
+          "when": "config.latex-workshop.bind.enter.key && editorTextFocus && acceptSuggestionOnEnter && !suggestWidgetVisible && !editorReadonly && editorLangId =~ /^latex$|^context$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/ && !vim.active"
+        },
+        {
+          "command": "latex-workshop.onEnterKey",
+          "key": "enter",
+          "when": "config.latex-workshop.bind.enter.key && editorTextFocus && !acceptSuggestionOnEnter && !editorReadonly && editorLangId =~ /^latex$|^context$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/ && !vim.active"
+        },
+        {
+          "command": "latex-workshop.onAltEnterKey",
+          "key": "alt+enter",
+          "when": "config.latex-workshop.bind.enter.key && editorTextFocus && acceptSuggestionOnEnter && !suggestWidgetVisible && !editorReadonly && editorLangId =~ /^latex$|^context$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/"
+        },
+        {
+          "command": "latex-workshop.onAltEnterKey",
+          "key": "alt+enter",
+          "when": "config.latex-workshop.bind.enter.key && editorTextFocus && !acceptSuggestionOnEnter && !editorReadonly && editorLangId =~ /^latex$|^context$|^latex-expl3$|^doctex$|^rsweave$|^jlweave$|^pweave$/"
+        }
+      ],
+      "markdownDefaults": null,
+      "relevantCommands": []
+    },
+    {
+      "id": "local-latex.latex-smart-tab-dispatcher",
+      "version": "0.4.0",
+      "manifest": "/home/minseok/.vscode-server/extensions/local-latex.latex-smart-tab-dispatcher-0.4.0/package.json",
+      "bindings": [
+        {
+          "key": "space",
+          "command": "latexSmartTab.insertContinuationSpace",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && inSnippetMode && editorHasSelection && config.latexSmartTab.preserveUntouchedTerminalDefaultOnSpace"
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigatePlain",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && !inSnippetMode && !hasNextTabstop",
+          "args": {
+            "inSnippetMode": false,
+            "hasNextTabstop": false
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigatePlain",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && !inSnippetMode && hasNextTabstop",
+          "args": {
+            "inSnippetMode": false,
+            "hasNextTabstop": true
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigateSnippet",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && inSnippetMode && !hasNextTabstop",
+          "args": {
+            "inSnippetMode": true,
+            "hasNextTabstop": false
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigateSnippet",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && inSnippetMode && hasNextTabstop",
+          "args": {
+            "inSnippetMode": true,
+            "hasNextTabstop": true
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.expandSnippet",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && hasSnippetCompletions && !editorHasSelection && !inSnippetMode",
+          "args": {
+            "inSnippetMode": false,
+            "hasSnippetCompletions": true
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.expandSnippet",
+          "when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && hasSnippetCompletions && !editorHasSelection && inSnippetMode",
+          "args": {
+            "inSnippetMode": true,
+            "hasSnippetCompletions": true
+          }
+        },
+        {
+          "key": "space",
+          "command": "latexSmartTab.insertContinuationSpace",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && inSnippetMode && editorHasSelection && config.latexSmartTab.preserveUntouchedTerminalDefaultOnSpace"
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigatePlain",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && !inSnippetMode && !hasNextTabstop",
+          "args": {
+            "inSnippetMode": false,
+            "hasNextTabstop": false
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigatePlain",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && !inSnippetMode && hasNextTabstop",
+          "args": {
+            "inSnippetMode": false,
+            "hasNextTabstop": true
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigateSnippet",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && inSnippetMode && !hasNextTabstop",
+          "args": {
+            "inSnippetMode": true,
+            "hasNextTabstop": false
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.navigateSnippet",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && inSnippetMode && hasNextTabstop",
+          "args": {
+            "inSnippetMode": true,
+            "hasNextTabstop": true
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.expandSnippet",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && latexSmartTab.notebookHasSnippetCompletions && !editorHasSelection && !inSnippetMode",
+          "args": {
+            "inSnippetMode": false,
+            "hasSnippetCompletions": true
+          }
+        },
+        {
+          "key": "tab",
+          "command": "latexSmartTab.expandSnippet",
+          "when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && latexSmartTab.notebookHasSnippetCompletions && !editorHasSelection && inSnippetMode",
+          "args": {
+            "inSnippetMode": true,
+            "hasSnippetCompletions": true
+          }
+        }
+      ],
+      "markdownDefaults": null,
+      "relevantCommands": []
+    },
+    {
+      "id": "ms-python.python",
+      "version": "2026.10.0",
+      "manifest": "/home/minseok/.vscode-server/extensions/ms-python.python-2026.10.0-linux-x64/package.json",
+      "bindings": [
+        {
+          "command": "python.execSelectionInTerminal",
+          "key": "shift+enter",
+          "when": "editorTextFocus && editorLangId == python && !findInputFocussed && !replaceInputFocussed && !jupyter.ownsSelection && !notebookEditorFocused && !isCompositeNotebook"
+        },
+        {
+          "command": "python.execInREPL",
+          "key": "shift+enter",
+          "when": "config.python.REPL.sendToNativeREPL && editorLangId == python && editorTextFocus && !jupyter.ownsSelection && !notebookEditorFocused && !isCompositeNotebook"
+        },
+        {
+          "command": "python.execInREPLEnter",
+          "key": "enter",
+          "when": "!config.interactiveWindow.executeWithShiftEnter && isCompositeNotebook && activeEditor == 'workbench.editor.repl' && !inlineChatFocused && !notebookCellListFocused"
+        },
+        {
+          "command": "python.execInInteractiveWindowEnter",
+          "key": "enter",
+          "when": "!config.interactiveWindow.executeWithShiftEnter && isCompositeNotebook && activeEditor == 'workbench.editor.interactive' && !inlineChatFocused && !notebookCellListFocused"
+        }
+      ],
+      "markdownDefaults": null,
+      "relevantCommands": []
+    },
+    {
+      "id": "ms-toolsai.jupyter",
+      "version": "2025.9.1",
+      "manifest": "/home/minseok/.vscode-server/extensions/ms-toolsai.jupyter-2025.9.1-linux-x64/package.json",
+      "bindings": [
+        {
+          "command": "jupyter.execSelectionInteractive",
+          "key": "shift+enter",
+          "when": "editorTextFocus && editorLangId == python && !findInputFocussed && !replaceInputFocussed && jupyter.ownsSelection && !notebookEditorFocused && !isCompositeNotebook"
+        },
+        {
+          "command": "jupyter.runcurrentcelladvance",
+          "key": "shift+enter",
+          "when": "editorTextFocus && !editorHasSelection && jupyter.hascodecells && !notebookEditorFocused && !isCompositeNotebook"
+        },
+        {
+          "command": "jupyter.runcurrentcell",
+          "key": "ctrl+enter",
+          "when": "editorTextFocus && !editorHasSelection && jupyter.hascodecells && !notebookEditorFocused && !isCompositeNotebook"
+        },
+        {
+          "command": "jupyter.runcurrentcellandaddbelow",
+          "key": "alt+enter",
+          "when": "editorTextFocus && !editorHasSelection && jupyter.hascodecells && !notebookEditorFocused"
+        },
+        {
+          "key": "escape",
+          "when": "isCompositeNotebook && !editorHoverVisible && !suggestWidgetVisible && !isComposing && !inSnippetMode && !exceptionWidgetVisible && !selectionAnchorSet && !LinkedEditingInputVisible && !renameInputVisible && !editorHasSelection && !accessibilityHelpWidgetVisible && !breakpointWidgetVisible && !findWidgetVisible && !markersNavigationVisible && !parameterHintsVisible && !editorHasMultipleSelections && !notificationToastsVisible && !notebookEditorFocused && !inlineChatVisible",
+          "command": "interactive.input.clear"
+        },
+        {
+          "command": "jupyter.runByLineStop",
+          "key": "ctrl+enter"
+        }
+      ],
+      "markdownDefaults": null,
+      "relevantCommands": [
+        {
+          "command": "jupyter.runByLineStop",
+          "title": "%jupyter.command.jupyter.runByLineStop.title%",
+          "icon": "$(debug-continue-small)",
+          "category": "Jupyter",
+          "enablement": "notebookCellResource in jupyter.notebookeditor.runByLineCells"
+        }
+      ]
+    },
+    {
+      "id": "ms-toolsai.jupyter-keymap",
+      "version": "1.1.2",
+      "manifest": "/home/minseok/.vscode-server/extensions/ms-toolsai.jupyter-keymap-1.1.2/package.json",
+      "bindings": [
+        {
+          "key": "ctrl+shift+-",
+          "when": "editorTextFocus && inputFocus && notebookEditorFocused && !notebookOutputInputFocused",
+          "command": "notebook.cell.split"
+        },
+        {
+          "key": "ctrl+enter",
+          "when": "editorTextFocus && inputFocus && notebookEditorFocused || notebookCellListFocused",
+          "command": "notebook.cell.executeAndFocusContainer"
+        },
+        {
+          "key": "shift+enter",
+          "when": "editorTextFocus && inputFocus && notebookEditorFocused && !interactiveEditorFocused || notebookCellListFocused && notebookCellType == 'code' && !interactiveEditorFocused",
+          "command": "notebook.cell.executeAndSelectBelow"
+        },
+        {
+          "win": "ctrl+alt+enter",
+          "linux": "ctrl+alt+enter",
+          "when": "interactiveEditorHasProvider && interactiveEditorVisible && !interactiveEditorDocumentChanged || interactiveEditorHasProvider && interactiveEditorVisible && config.interactiveEditor.editMode != 'preview'",
+          "command": "interactive.acceptChanges"
+        }
+      ],
+      "markdownDefaults": null,
+      "relevantCommands": []
+    },
+    {
+      "id": "ms-toolsai.jupyter-keymap",
+      "version": "1.1.2",
+      "manifest": "/mnt/c/Users/p1072/.vscode/extensions/ms-toolsai.jupyter-keymap-1.1.2/package.json",
+      "bindings": [
+        {
+          "key": "ctrl+shift+-",
+          "when": "editorTextFocus && inputFocus && notebookEditorFocused && !notebookOutputInputFocused",
+          "command": "notebook.cell.split"
+        },
+        {
+          "key": "ctrl+enter",
+          "when": "editorTextFocus && inputFocus && notebookEditorFocused || notebookCellListFocused",
+          "command": "notebook.cell.executeAndFocusContainer"
+        },
+        {
+          "key": "shift+enter",
+          "when": "editorTextFocus && inputFocus && notebookEditorFocused && !interactiveEditorFocused || notebookCellListFocused && notebookCellType == 'code' && !interactiveEditorFocused",
+          "command": "notebook.cell.executeAndSelectBelow"
+        },
+        {
+          "win": "ctrl+alt+enter",
+          "linux": "ctrl+alt+enter",
+          "when": "interactiveEditorHasProvider && interactiveEditorVisible && !interactiveEditorDocumentChanged || interactiveEditorHasProvider && interactiveEditorVisible && config.interactiveEditor.editMode != 'preview'",
+          "command": "interactive.acceptChanges"
+        }
+      ],
+      "markdownDefaults": null,
+      "relevantCommands": []
+    },
+    {
+      "id": "GitHub.copilot-chat",
+      "version": "0.73.0",
+      "manifest": "/mnt/c/Users/p1072/AppData/Local/Programs/Microsoft VS Code/c4453f8ea4/resources/app/extensions/copilot/package.json",
+      "bindings": [
+        {
+          "command": "github.copilot.nes.captureExpected.confirm",
+          "key": "ctrl+enter",
+          "mac": "cmd+enter",
+          "when": "copilotNesCaptureMode && editorTextFocus"
+        },
+        {
+          "command": "github.copilot.nes.captureExpected.abort",
+          "key": "escape",
+          "when": "copilotNesCaptureMode && editorTextFocus"
+        }
+      ],
+      "markdownDefaults": null,
+      "relevantCommands": []
+    },
+    {
+      "id": "vscode.markdown",
+      "version": "30.0.0",
+      "manifest": "/mnt/c/Users/p1072/AppData/Local/Programs/Microsoft VS Code/c4453f8ea4/resources/app/extensions/markdown-basics/package.json",
+      "bindings": [],
+      "markdownDefaults": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false
+      },
+      "relevantCommands": []
+    },
+    {
+      "id": "vscode.markdown-language-features",
+      "version": "10.0.0",
+      "manifest": "/mnt/c/Users/p1072/AppData/Local/Programs/Microsoft VS Code/c4453f8ea4/resources/app/extensions/markdown-language-features/package.json",
+      "bindings": [
+        {
+          "command": "markdown.editor.triggerSuggest",
+          "key": "ctrl+space",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus"
+        },
+        {
+          "command": "markdown.showPreviewToSide",
+          "key": "ctrl+k v",
+          "mac": "cmd+k v",
+          "when": "editorFocus && editorLangId =~ /^(markdown|prompt|instructions|chatagent|skill)$/ && !notebookEditorFocused"
+        },
+        {
+          "command": "markdown.editor.cursorLeft",
+          "key": "ctrl+b",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus && isMac",
+          "$generated": true
+        },
+        {
+          "command": "markdown.editor.cursorWordLeft",
+          "key": "alt+left",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus && isMac",
+          "$generated": true
+        },
+        {
+          "command": "markdown.editor.cursorWordRight",
+          "key": "alt+right",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus && isMac",
+          "$generated": true
+        },
+        {
+          "command": "markdown.editor.deleteRight",
+          "key": "ctrl+d",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus && isMac",
+          "$generated": true
+        },
+        {
+          "command": "markdown.editor.moveLinesUp",
+          "key": "alt+up",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus",
+          "$generated": true
+        },
+        {
+          "command": "markdown.editor.moveLinesDown",
+          "key": "alt+down",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus",
+          "$generated": true
+        },
+        {
+          "command": "markdown.editor.smartEnter",
+          "key": "enter",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus",
+          "$generated": true
+        },
+        {
+          "command": "markdown.editor.insertHardLineBreak",
+          "key": "shift+enter",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus",
+          "$generated": true
+        },
+        {
+          "command": "markdown.editor.insertParagraph",
+          "key": "ctrl+enter",
+          "when": "activeCustomEditorId == 'vscode.markdown.editor' && markdownEditorFocus",
+          "$generated": true
+        }
+      ],
+      "markdownDefaults": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+          "comments": "off",
+          "strings": "off",
+          "other": "off"
+        }
+      },
+      "relevantCommands": []
+    }
+  ],
+  "workbenchEvidence": {
+    "quitEdit": {
+      "characterOffset": 12525406,
+      "excerpt": "&&gh.get(t)?.focus()}});var N6n=D.and(Ns,Of,VY.toNegated());z(class extends hh{constructor(){super({id:_ao,title:d(25049,null),menu:{id:O.NotebookCellTitle,when:D.and(jC.isEqualTo(\"markup\"),Uve,sT),order:4,group:IG},icon:K0n,keybinding:[{when:D.and(N6n,Re.hoverVisible.toNegated(),Re.hasNonEmptySelection.toNegated(),Re.hasMultipleSelections.toNegated()),primary:9,weight:py-5},{when:D.and(Ns,rW),primary:9,weight:205},{when:D.and(N6n,jC.isEqualTo(\"markup\")),primary:259,win:{primary:2563},weight:py-5}]})}async runWithContext(o,e){e.cell.cellKind===1&&e.cell.updateEditState(0,_ao),await e.notebookEditor.focusNotebookCell(e.cell,\"container\",{skipReveal:!0})}});z(class extends Zm{constructor(){super({id:L6n,title:d(25050,null)})}async runWithContext(o,e){if(!e.notebookEditor.hasModel())return;let t=e.notebookEditor.getViewModel();if(!t)return;let i=e.notebookEditor.getActiveCell();t.viewCells.filter(r=>r.cellKind===1&&r.getEditState()===1).forEach(r=>{r.updateEditState(0,L6n)}),i&&await e.notebookEditor.focusNotebookCell(i,\"container\",{skipReveal:!0})}});z(class extends hh{constructor(){super({id:yys,title:d(25047,null),keybinding:{primary:20,mac:{primary:2049},when:D.and(Ns,D.not(zm),Vve.toNegated()),weight:200},menu:[{id:O.NotebookCellDelete,when:pu,group:IG},{id:O.InteractiveCellDelete,group:IG}],icon:U0n})}async runWithContext(o,e){if(!e.notebookEditor.hasModel())return;let t,n=o.get(tc).getCellExecution(e.cell.uri)?.state,r=o.get(U);if(n===3&&r.getValue(Jt.confirmDeleteRunningCell)){let a=o.get(Ct),c=d(25036,null);t=await a.confirm({type:\"question\",message:d(25037,null),prima"
+    },
+    "shiftEnter": {
+      "characterOffset": 9646112,
+      "excerpt": ")):e.notebookEditor.cancelNotebookCells(e.selectedCells)}});z(class extends hh{constructor(){super({id:BWn,precondition:D.or(YFt,jC.isEqualTo(\"markup\")),title:d(25061,null),keybinding:{when:D.and(Jm,VY.negate()),primary:1027,weight:py}})}async runWithContext(o,e){let t=o.get(Mt),i=o.get(le),n=e.notebookEditor.getCellIndex(e.cell);if(typeof n!=\"number\")return;let r=o.get(Yt),c=o.get(U).getValue(Jt.scrollToRevealCell),l;if(c===\"none\"?l={skipReveal:!0}:l={revealBehavior:c===\"fullCell\"?0:1},e.cell.cellKind===1){let u=e.notebookEditor.cellAt(n+1);if(e.cell.updateEditState(0,BWn),u)await e.notebookEditor.focusNotebookCell(u,\"container\",l);else{let p=v5(r,e.notebookEditor,n,1,\"below\");p&&await e.notebookEditor.focusNotebookCell(p,\"editor\",l)}return}else{let u=e.notebookEditor.cellAt(n+1);if(u)await e.notebookEditor.focusNotebookCell(u,\"container\",l);else{let p=v5(r,e.notebookEditor,n,2,\"below\");p&&await e.notebookEditor.focusNotebookCell(p,\"editor\",l)}return Q_i(t,e,i)}}});z(class extends hh{constructor(){super({id:VWn,precondition:D.or(YFt,jC.isEqualTo(\"markup\")),title:d(25060,null),keybinding:{when:Jm,primary:515,weight:py}})}async runWithContext(o,e){let t=o.get(Mt),i=o.get(le),n=e.notebookEditor.getCellIndex(e.cell),r=o.get(Yt),a=e.cell.focusMode===1?\"editor\":\"container\",c=v5(r,e.notebookEditor,n,e.cell.cellKind,\"below\");c&&await e.notebookEditor.focusNotebookCell(c,a),e.cell.cellKind===1?e.cell.updateEditState(0,VWn):Q_i(t,e,i)}});var j_i=class extends Zm{getEditorContextFromArgsOrActive(o,e){return Dxi(o,e)??uLe(o.get(le))}async runWithContext(o,e){return e.notebookEditor.ca"
+    },
+    "altEnter": {
+      "characterOffset": 9647033,
+      "excerpt": "ditor.focusNotebookCell(p,\"editor\",l)}return Q_i(t,e,i)}}});z(class extends hh{constructor(){super({id:VWn,precondition:D.or(YFt,jC.isEqualTo(\"markup\")),title:d(25060,null),keybinding:{when:Jm,primary:515,weight:py}})}async runWithContext(o,e){let t=o.get(Mt),i=o.get(le),n=e.notebookEditor.getCellIndex(e.cell),r=o.get(Yt),a=e.cell.focusMode===1?\"editor\":\"container\",c=v5(r,e.notebookEditor,n,e.cell.cellKind,\"below\");c&&await e.notebookEditor.focusNotebookCell(c,a),e.cell.cellKind===1?e.cell.updateEditState(0,VWn):Q_i(t,e,i)}});var j_i=class extends Zm{getEditorContextFromArgsOrActive(o,e){return Dxi(o,e)??uLe(o.get(le))}async runWithContext(o,e){return e.notebookEditor.cancelNotebookCells()}};z(class extends j_i{constructor(){super({id:Jts,title:F(25056,\"Stop Execution\"),icon:Rxi,menu:[{id:O.EditorTitle,order:-1,group:\"navigation\",when:D.and(Rl,u5,p5.toNegated(),D.notEquals(\"config.notebook.globalToolbar\",!0))},{id:O.NotebookToolbar,order:-1,group:\"navigation/execute\",when:D.and(u5,p5.toNegated(),D.equals(\"config.notebook.globalToolbar\",!0))}]})}});z(class extends j_i{constructor(){super({id:Zts,title:F(25064,\"Interrupt\"),precondition:D.and(u5,p5),icon:Rxi,menu:[{id:O.EditorTitle,order:-1,group:\"navigation\",when:D.and(Rl,u5,p5,D.notEquals(\"config.notebook.globalToolbar\",!0))},{id:O.NotebookToolbar,order:-1,group:\"navigation/execute\",when:D.and(u5,p5,D.equals(\"config.notebook.globalToolbar\",!0))},{id:O.InteractiveToolbar,group:\"navigation/execute\"}]})}});Me.appendMenuItem(O.NotebookToolbar,{title:d(25069,null),submenu:O.NotebookCellExecuteGoTo,group:\"navigation/execute\",order"
+    },
+    "ctrlEnterCommandPrecondition": {
+      "characterOffset": 9644840,
+      "excerpt": "ellsInRange(i);e.notebookEditor.executeNotebookCells(n)}}});z(class extends MS{constructor(){super({id:tis,precondition:YFt,title:d(25059,null),metadata:{description:d(25059,null),args:eFt},icon:_Y})}parseArgs(o,...e){return xY(o,...e)}async runWithContext(o,e){let t=o.get(Mt),i=o.get(le);if(e.ui)await e.notebookEditor.focusNotebookCell(e.cell,\"container\",{skipReveal:!0});else{let n=e.selectedCells[0];n&&await e.notebookEditor.focusNotebookCell(n,\"container\",{skipReveal:!0})}await Q_i(t,e,i)}});var zWn=D.or(D.equals(lLe.key,\"executing\"),D.equals(lLe.key,\"pending\"));z(class extends MS{constructor(){super({id:eis,precondition:zWn,title:d(25055,null),icon:Rxi,menu:{id:O.NotebookCellExecutePrimary,when:zWn,group:\"inline\"},metadata:{description:d(25055,null),args:[{name:\"options\",description:\"The cell range options\",schema:{type:\"object\",required:[\"ranges\"],properties:{ranges:{type:\"array\",items:[{type:\"object\",required:[\"start\",\"end\"],properties:{start:{type:\"number\"},end:{type:\"number\"}}}]},document:{type:\"object\",description:\"The document uri\"}}}}]}})}parseArgs(o,...e){return xY(o,...e)}async runWithContext(o,e){return e.ui?(await e.notebookEditor.focusNotebookCell(e.cell,\"container\",{skipReveal:!0}),e.notebookEditor.cancelNotebookCells(Bt.single(e.cell))):e.notebookEditor.cancelNotebookCells(e.selectedCells)}});z(class extends hh{constructor(){super({id:BWn,precondition:D.or(YFt,jC.isEqualTo(\"markup\")),title:d(25061,null),keybinding:{when:D.and(Jm,VY.negate()),primary:1027,weight:py}})}async runWithContext(o,e){let t=o.get(Mt),i=o.get(le),n=e.notebookEditor.getCellIndex(e.ce"
+    },
+    "codeOnlyExecutionCondition": {
+      "characterOffset": 9640419,
+      "excerpt": "LastFailedCell\",KLe=D.and(jC.isEqualTo(\"code\"),D.or(D.greater(zve.key,0),D.greater(P9e.key,0),Exi)),YFt=D.and(KLe,kxi.toNegated()),qWn=D.and(jC.isEqualTo(\"markup\"));function KWn(s){for(let o=0;o<s.notebookEditor.getLength();o++){let e=s.notebookEditor.cellAt(o);e.cellKind===1&&e.updateEditState(0,\"renderAllMarkdownCells\")}}async function Q_i(s,o,e){let t=s.activeGroup;if(t&&t.activeEditor&&t.pinEditor(t.activeEditor),o.autoReveal&&(o.cell||o.selectedCells?.length)&&e&&e.openEditor({resource:o.notebookEditor.textModel.uri,options:{revealIfOpened:!0}}),o.ui&&o.cell)o.autoReveal&&UWn(o.cell,o.notebookEditor),await o.notebookEditor.executeNotebookCells(Bt.single(o.cell));else if(o.selectedCells?.length||o.cell){let n=o.selectedCells?.length?o.selectedCells:[o.cell],r=n[0];r&&o.autoReveal&&UWn(r,o.notebookEditor),await o.notebookEditor.executeNotebookCells(n)}let i;for(let[,n]of o.notebookEditor.codeEditors)if(ye(n.getModel()?.uri,(o.cell??o.selectedCells?.[0])?.uri)){i=n;break}}var ais=20,cis=60;function UWn(s,o){if(o.focusNotebookCell(s,\"container\",{skipReveal:!0}),s.cellKind===1){let v=o.getCellIndex(s);o.revealCellRangeInView({start:v,end:v+1});return}if(!(s instanceof Cv))return;let e=o.getAbsoluteTopOfElement(s),t=e+s.layoutInfo.outputContainerOffset,i=s.layoutInfo.outputTotalHeight,n=o.getAbsoluteBottomOfElement(s),r=o.getLayoutInfo().height,a=r*.34,c=r*.66,l=s.layoutInfo.totalHeight,u=e>=o.scrollTop&&n<=o.scrollBottom,p=t-25>=o.scrollTop&&t+25<=o.scrollBottom,h=v=>{o.setScrollTop(v-ais)},g=v=>{o.setScrollTop(v)},f=v=>{o.setScrollTop(v+cis)};if(!u){if(l<=r&&!p){h(e);retur"
+    },
+    "extensionBindingPreconditions": {
+      "characterOffset": 7726282,
+      "excerpt": "form(e,t,i,n){if($o===1&&n){if(n)return n}else if($o===2){if(t)return t}else if(i)return i;return e}_asCommandRule(e,t,i,n){let{command:r,args:a,when:c,key:l,mac:u,linux:p,win:h}=n,g=Nne.bindToCurrentPlatform(l,u,p,h);if(!g)return;let f;t?f=300+i:f=400+i;let v=Me.getCommand(r),b=v&&v.precondition,S;return c&&b?S=D.and(b,D.deserialize(c)):c?S=D.deserialize(c):b&&(S=b),{id:r,args:a,when:S,weight:f,keybinding:JH.parseKeybinding(g),extensionId:e.value,isBuiltinExtension:t}}getDefaultKeybindingsContent(){let e=this._getResolver(),t=e.getDefaultKeybindings(),i=e.getDefaultBoundCommands();return Nne._getDefaultKeybindings(t)+`\n\n`+Nne._getAllCommandsAsComment(i)}static _getDefaultKeybindings(e){let t=new K6e;t.writeLine(\"[\");let i=e.length-1;return e.forEach((n,r)=>{pPe.writeKeybindingItem(t,n),r!==i?t.writeLine(\",\"):t.writeLine()}),t.writeLine(\"]\"),t.toString()}static _getAllCommandsAsComment(e){let i=F6e(e).sort().join(`\n// - `);return\"// \"+d(30825,null)+`\n// - `+i}mightProducePrintableCharacter(e){if(e.ctrlKey||e.metaKey||e.altKey)return!1;let t=aC.toEnum(e.code);if(r7r.indexOf(t)!==-1)return!!(e.keyCode===Q_[t]||yt&&e.keyCode===q4.get(t));if(Q_[t]!==-1)return!1;let n=this.keyboardLayoutService.getRawKeyboardMapping();if(!n)return!1;let r=n[e.code];return!(!r||!r.value||/\\s/.test(r.value))}};Nne=I([m(0,ae),m(1,ke),m(2,De),m(3,Pe),m(4,tr),m(5,hi),m(6,Rt),m(7,Ee),m(8,Tt),m(9,ce),m(10,hwi)],Nne);var $Io=class extends x{constructor(e,t,i,n){super();this.userDataProfileService=e;this.uriIdentityService=t;this.fileService=i;this._rawKeybindings=[];this._keybindings=[];this.watchDispos"
+    },
+    "tabFocusToggle": {
+      "characterOffset": 3675134,
+      "excerpt": "unt()),i.stop(),console.log(`tokenization took ${i.elapsed()}`)}};qi(Mro);var fxt=class s extends Q{static{this.ID=\"editor.action.toggleTabFocusMode\"}constructor(){super({id:s.ID,title:F(1738,\"Toggle Tab Key Moves Focus\"),precondition:void 0,keybinding:{primary:2091,mac:{primary:1323},weight:100},metadata:{description:F(1737,\"Determines whether the tab key moves focus around the workbench or inserts the tab character in the current editor. This is also called tab trapping, tab navigation, or tab focus mode.\")},f1:!0})}run(){let e=!CN.getTabFocusMode();CN.setTabFocusMode(e),e?Vn(d(1740,null)):Vn(d(1739,null))}};z(fxt);var j0r=26,NGe=class extends x{constructor(e,t){super();this._editor=e;this.instantiationService=t;this.banner=this._register(this.instantiationService.createInstance(vxt))}hide(){this._editor.setBanner(null,0),this.banner.clear()}show(e){this.banner.show({...e,onClose:()=>{this.hide(),e.onClose?.()}}),this._editor.setBanner(this.banner.element,j0r)}};NGe=I([m(1,B)],NGe);var vxt=class extends x{constructor(e,t){super();this.instantiationService=e;this.markdownRendererService=t;this.element=E(\"div.editor-banner\"),this.element.tabIndex=0}getAriaLabel(e){if(e.ariaLabel)return e.ariaLabel;if(typeof e.message==\"string\")return e.message}getBannerMessage(e){if(typeof e==\"string\"){let t=E(\"span\");return t.innerText=e,t}return this.markdownRendererService.render(e).element}clear(){Ze(this.element)}show(e){Ze(this.element);let t=this.getAriaLabel(e);t&&this.element.setAttribute(\"aria-label\",t);let i=_(this.element,E(\"div.icon-container\"));i.setAttribute(\"aria-hidden\",\"tr"
+    },
+    "nextSnippet": {
+      "characterOffset": 3154895,
+      "excerpt": "tText:b.value,sortText:\"a\".repeat(v+1),range:p.range,filterText:g?`${h}_${b.value}`:void 0,command:{id:\"jumpToNextSnippetPlaceholder\",title:d(1614,null)}})}return{suggestions:f}}},i=this._editor.getModel(),n,r=!1,a=()=>{n?.dispose(),r=!1},c=()=>{r||(n=this._languageFeaturesService.completionProvider.register({language:i.getLanguageId(),pattern:i.uri.fsPath,scheme:i.uri.scheme,exclusive:!0},t),this._snippetListener.add(n),r=!0)};this._choiceCompletions={provider:t,enable:c,disable:a}}this._updateState(),this._snippetListener.add(this._editor.onDidChangeModelContent(t=>t.isFlush&&this.cancel())),this._snippetListener.add(this._editor.onDidChangeModel(()=>this.cancel())),this._snippetListener.add(this._editor.onDidChangeCursorSelection(()=>this._updateState()))}}_updateState(){if(!(!this._session||!this._editor.hasModel())){if(this._modelVersionId===this._editor.getModel().getAlternativeVersionId())return this.cancel();if(!this._session.hasPlaceholder)return this.cancel();if(this._session.isAtLastPlaceholder||!this._session.isSelectionWithinPlaceholders())return this._editor.getModel().pushStackElement(),this.cancel();this._inSnippet.set(!0),this._inSnippetObservable.set(!0,void 0),this._hasPrevTabstop.set(!this._session.isAtFirstPlaceholder),this._hasNextTabstop.set(!this._session.isAtLastPlaceholder),this._handleChoice()}}_handleChoice(){if(!this._session||!this._editor.hasModel()){this._currentChoice=void 0,this._inSnippetChoice.reset();return}let{activeChoice:o}=this._session;if(!o||!this._choiceCompletions){this._choiceCompletions?.disable(),this._currentChoice=void 0,thi"
+    },
+    "previousSnippet": {
+      "characterOffset": 3157608,
+      "excerpt": "tTabstop),handler:s=>s.next(),kbOpts:{weight:130,kbExpr:Re.textInputFocus,primary:2}}));Zo(new Nii({id:\"jumpToPrevSnippetPlaceholder\",precondition:D.and(Ta.InSnippetMode,Ta.HasPrevTabstop),handler:s=>s.prev(),kbOpts:{weight:130,kbExpr:Re.textInputFocus,primary:1026}}));jt.registerKeybindingRule({id:\"jumpToPrevSnippetPlaceholder\",weight:191,when:D.and(Ta.InSnippetMode,Ta.HasPrevTabstop,Ta.InSnippetChoice,Re.textInputFocus),primary:1026});Zo(new Nii({id:\"leaveSnippet\",precondition:Ta.InSnippetMode,handler:s=>s.cancel(!0),kbOpts:{weight:130,kbExpr:Re.textInputFocus,primary:9,secondary:[1033]}}));Zo(new Nii({id:\"acceptSnippet\",precondition:Ta.InSnippetMode,handler:s=>s.finish()}));function vTe(s){return new Coo(s)}var Coo=class extends ZUe{constructor(e){super();this._textModel=e}getOffset(e){return this._textModel.getOffsetAt(e)}getPosition(e){return this._textModel.getPositionAt(e)}};var UOr=[];function _dn(){return UOr}function koo(s){return zOr(s).map(e=>e.getEndPosition())}function zOr(s){let o=r8t.createSortPermutation(s,Cl(i=>i.range,Y.compareRangesUsingStarts)),t=new Dg(o.apply(s)).getNewRanges();return o.inverse().apply(t)}function Edn(s,o){let e=vTe(o),t=o.getValue();return s.map(r=>e.getStringReplacement(r)).map(r=>r.removeCommonSuffixPrefix(t)).map(r=>e.getTextReplacement(r))}function Tdn(s,o){let e=_e(\"result\",[]),t=[];return o.add(de(i=>{let n=s.read(i);Ii(r=>{if(n.length!==t.length){t.length=n.length;for(let a=0;a<t.length;a++)t[a]||(t[a]=_e(\"item\",n[a]));e.set([...t],r)}t.forEach((a,c)=>a.set(n[c],r))})})),e}var Oii=class{constructor(o){this._contextKeyService=o"
+    },
+    "cancelSnippet": {
+      "characterOffset": 3157961,
+      "excerpt": "Ta.InSnippetMode,Ta.HasPrevTabstop,Ta.InSnippetChoice,Re.textInputFocus),primary:1026});Zo(new Nii({id:\"leaveSnippet\",precondition:Ta.InSnippetMode,handler:s=>s.cancel(!0),kbOpts:{weight:130,kbExpr:Re.textInputFocus,primary:9,secondary:[1033]}}));Zo(new Nii({id:\"acceptSnippet\",precondition:Ta.InSnippetMode,handler:s=>s.finish()}));function vTe(s){return new Coo(s)}var Coo=class extends ZUe{constructor(e){super();this._textModel=e}getOffset(e){return this._textModel.getOffsetAt(e)}getPosition(e){return this._textModel.getPositionAt(e)}};var UOr=[];function _dn(){return UOr}function koo(s){return zOr(s).map(e=>e.getEndPosition())}function zOr(s){let o=r8t.createSortPermutation(s,Cl(i=>i.range,Y.compareRangesUsingStarts)),t=new Dg(o.apply(s)).getNewRanges();return o.inverse().apply(t)}function Edn(s,o){let e=vTe(o),t=o.getValue();return s.map(r=>e.getStringReplacement(r)).map(r=>r.removeCommonSuffixPrefix(t)).map(r=>e.getTextReplacement(r))}function Tdn(s,o){let e=_e(\"result\",[]),t=[];return o.add(de(i=>{let n=s.read(i);Ii(r=>{if(n.length!==t.length){t.length=n.length;for(let a=0;a<t.length;a++)t[a]||(t[a]=_e(\"item\",n[a]));e.set([...t],r)}t.forEach((a,c)=>a.set(n[c],r))})})),e}var Oii=class{constructor(o){this._contextKeyService=o}bind(o,e){return xl(o,this._contextKeyService,e instanceof Function?e:t=>e.read(t))}};function xoo(s,o){return new Promise(e=>{let t,i=setTimeout(()=>{t&&t.dispose(),e()},s);o&&(t=o.onCancellationRequested(()=>{clearTimeout(i),t&&t.dispose(),e()}))})}var Tkt=class s{constructor(o,e=void 0){this.error=o;this.message=e}static message(o){return new s(vo"
+    },
+    "acceptSuggestion": {
+      "characterOffset": 3348717,
+      "excerpt": "st(void 0,n,void 0)}};xn(Jd.ID,Jd,2);qi(soi);var VN=190,rA=rp.bindToContribution(Jd.get);Zo(new rA({id:\"acceptSelectedSuggestion\",precondition:D.and(rs.Visible,rs.HasFocusedSuggestion),handler(s){s.acceptSelectedSuggestion(!0,!1)},kbOpts:[{primary:2,kbExpr:D.and(rs.Visible,Re.textInputFocus),weight:VN},{primary:3,kbExpr:D.and(rs.Visible,Re.textInputFocus,rs.AcceptSuggestionsOnEnter,rs.MakesTextEdit),weight:VN}],menuOpts:[{menuId:Z$,title:d(1673,null),group:\"left\",order:1,when:D.and(rs.HasFocusedSuggestion,rs.HasInsertAndReplaceRange.toNegated())},{menuId:Z$,title:d(1673,null),group:\"left\",order:1,when:D.and(rs.HasFocusedSuggestion,rs.HasInsertAndReplaceRange,rs.InsertMode.isEqualTo(\"insert\"))},{menuId:Z$,title:d(1674,null),group:\"left\",order:1,when:D.and(rs.HasFocusedSuggestion,rs.HasInsertAndReplaceRange,rs.InsertMode.isEqualTo(\"replace\"))}]}));Zo(new rA({id:\"acceptAlternativeSelectedSuggestion\",precondition:D.and(rs.Visible,Re.textInputFocus,rs.HasFocusedSuggestion),kbOpts:{weight:VN,kbExpr:Re.textInputFocus,primary:1027,secondary:[1026]},handler(s){s.acceptSelectedSuggestion(!1,!0)},menuOpts:[{menuId:Z$,group:\"left\",order:2,when:D.and(rs.HasFocusedSuggestion,rs.HasInsertAndReplaceRange,rs.InsertMode.isEqualTo(\"insert\")),title:d(1674,null)},{menuId:Z$,group:\"left\",order:2,when:D.and(rs.HasFocusedSuggestion,rs.HasInsertAndReplaceRange,rs.InsertMode.isEqualTo(\"replace\")),title:d(1673,null)}]}));je.registerCommandAlias(\"acceptSelectedSuggestionOnEnter\",\"acceptSelectedSuggestion\");Zo(new rA({id:\"hideSuggestWidget\",precondition:rs.Visible,handler:s=>s.cancelSuggestWidget(),kbO"
+    },
+    "alternativeSuggestion": {
+      "characterOffset": 3349486,
+      "excerpt": "asFocusedSuggestion,rs.HasInsertAndReplaceRange,rs.InsertMode.isEqualTo(\"replace\"))}]}));Zo(new rA({id:\"acceptAlternativeSelectedSuggestion\",precondition:D.and(rs.Visible,Re.textInputFocus,rs.HasFocusedSuggestion),kbOpts:{weight:VN,kbExpr:Re.textInputFocus,primary:1027,secondary:[1026]},handler(s){s.acceptSelectedSuggestion(!1,!0)},menuOpts:[{menuId:Z$,group:\"left\",order:2,when:D.and(rs.HasFocusedSuggestion,rs.HasInsertAndReplaceRange,rs.InsertMode.isEqualTo(\"insert\")),title:d(1674,null)},{menuId:Z$,group:\"left\",order:2,when:D.and(rs.HasFocusedSuggestion,rs.HasInsertAndReplaceRange,rs.InsertMode.isEqualTo(\"replace\")),title:d(1673,null)}]}));je.registerCommandAlias(\"acceptSelectedSuggestionOnEnter\",\"acceptSelectedSuggestion\");Zo(new rA({id:\"hideSuggestWidget\",precondition:rs.Visible,handler:s=>s.cancelSuggestWidget(),kbOpts:{weight:VN,kbExpr:Re.textInputFocus,primary:9,secondary:[1033]}}));Zo(new rA({id:\"selectNextSuggestion\",precondition:D.and(rs.Visible,D.or(rs.MultipleSuggestions,rs.HasFocusedSuggestion.negate())),handler:s=>s.selectNextSuggestion(),kbOpts:{weight:VN,kbExpr:Re.textInputFocus,primary:18,secondary:[2066],mac:{primary:18,secondary:[2066,300]}},menuOpts:{menuId:Z$,group:\"left\",order:0,when:rs.HasFocusedSuggestion.toNegated(),title:d(1678,null)}}));Zo(new rA({id:\"selectNextPageSuggestion\",precondition:D.and(rs.Visible,D.or(rs.MultipleSuggestions,rs.HasFocusedSuggestion.negate())),handler:s=>s.selectNextPageSuggestion(),kbOpts:{weight:VN,kbExpr:Re.textInputFocus,primary:12,secondary:[2060]}}));Zo(new rA({id:\"selectLastSuggestion\",precondition:D.and(rs.Visible,D"
+    },
+    "inlineTab": {
+      "characterOffset": 3532797,
+      "excerpt": "run(o,e){await Mu.get(e)?.model.get()?.acceptNextLine()}},Eoi=class extends yo{constructor(){super({id:K$,label:F(1375,\"Accept Inline Suggestion\"),precondition:D.or(_l.inlineSuggestionVisible,_l.inlineEditVisible),menuOpts:[{menuId:O.InlineSuggestionToolbar,title:d(1372,null),group:\"primary\",order:2},{menuId:O.InlineEditsActions,title:d(1372,null),group:\"primary\",order:2}],kbOpts:[{primary:2,weight:200,kbExpr:D.or(D.and(_l.inlineSuggestionVisible,Re.tabMovesFocus.toNegated(),rs.Visible.toNegated(),Re.hoverFocused.toNegated(),_l.hasSelection.toNegated(),_l.inlineSuggestionHasIndentationLessThanTabSize),D.and(_l.inlineEditVisible,Re.tabMovesFocus.toNegated(),rs.Visible.toNegated(),Re.hoverFocused.toNegated(),_l.tabShouldAcceptInlineEdit))}]})}async run(o,e){let t=Mu.getInFocusedEditorOrParent(o);t&&(t.model.get()?.accept(t.editor),t.editor.focus())}};jt.registerKeybindingRule({id:K$,weight:202,primary:2,when:D.and(_l.inInlineEditsPreviewEditor)});var Toi=class extends yo{constructor(){super({id:WEe,label:F(1376,\"Accept Inline Suggestion Alternative Action\"),precondition:D.and(_l.inlineSuggestionAlternativeActionVisible,_l.inlineEditVisible),menuOpts:[],kbOpts:[{primary:1026,weight:203}]})}async run(o,e){let t=Mu.getInFocusedEditorOrParent(o);t&&(t.model.get()?.accept(t.editor,!0),t.editor.focus())}};jt.registerKeybindingRule({id:WEe,weight:203,primary:1026,when:D.and(_l.inInlineEditsPreviewEditor)});var Doi=class extends yo{constructor(){super({id:Zqe,label:F(1382,\"Jump to next inline edit\"),precondition:_l.inlineEditVisible,menuOpts:[{menuId:O.InlineEditsActions,title:d(1389"
+    },
+    "inlineShiftTab": {
+      "characterOffset": 3533702,
+      "excerpt": "primary:2,when:D.and(_l.inInlineEditsPreviewEditor)});var Toi=class extends yo{constructor(){super({id:WEe,label:F(1376,\"Accept Inline Suggestion Alternative Action\"),precondition:D.and(_l.inlineSuggestionAlternativeActionVisible,_l.inlineEditVisible),menuOpts:[],kbOpts:[{primary:1026,weight:203}]})}async run(o,e){let t=Mu.getInFocusedEditorOrParent(o);t&&(t.model.get()?.accept(t.editor,!0),t.editor.focus())}};jt.registerKeybindingRule({id:WEe,weight:203,primary:1026,when:D.and(_l.inInlineEditsPreviewEditor)});var Doi=class extends yo{constructor(){super({id:Zqe,label:F(1382,\"Jump to next inline edit\"),precondition:_l.inlineEditVisible,menuOpts:[{menuId:O.InlineEditsActions,title:d(1389,null),group:\"primary\",order:1,when:_l.cursorAtInlineEdit.toNegated()}],kbOpts:{primary:2,weight:201,kbExpr:D.and(_l.inlineEditVisible,Re.tabMovesFocus.toNegated(),rs.Visible.toNegated(),Re.hoverFocused.toNegated(),_l.tabShouldJumpToInlineEdit)}})}async run(o,e){let t=Mu.get(e);t&&t.jump()}},txt=class s extends yo{static{this.ID=Dei}constructor(){super({id:s.ID,label:F(1381,\"Hide Inline Suggestion\"),precondition:D.or(_l.inlineSuggestionVisible,_l.inlineEditVisible),kbOpts:{kbExpr:Re.editorTextFocus,weight:190,primary:9},menuOpts:[{menuId:O.InlineEditsActions,title:d(1391,null),group:\"primary\",order:3}]})}async run(o,e){let t=Mu.getInFocusedEditorOrParent(o);Ii(i=>{t?.model.get()?.stop(\"explicitCancel\",i)}),t?.editor.focus()}},Roi=class s extends yo{static{this.ID=nCt}constructor(){super({id:s.ID,label:F(1385,\"Toggle Inline Suggestions Show Collapsed\"),precondition:D.true()})}async run(o,e){le"
+    },
+    "navigateNextCell": {
+      "characterOffset": 12623023,
+      "excerpt": "ht:201},{when:Vve,primary:16,weight:201}],f1:!1})}run(){}});z(class extends hh{constructor(){super({id:nIs,title:d(24961,null),keybinding:[{when:D.and(Ns,el.negate(),D.equals(\"config.notebook.navigation.allowNavigateToSurroundingCells\",!0),D.and(D.has(zm),Re.editorTextFocus,GTe.notEqualsTo(\"top\"),GTe.notEqualsTo(\"none\"),D.or($Te.isEqualTo(\"end\"),$Te.isEqualTo(\"both\"))),Re.isEmbeddedDiffEditor.negate()),primary:18,weight:py},{when:D.and(Ns,el.negate(),D.equals(\"config.notebook.navigation.allowNavigateToSurroundingCells\",!0),D.and(jC.isEqualTo(\"markup\"),Uve.isEqualTo(!1),XOt),Re.isEmbeddedDiffEditor.negate()),primary:18,weight:200},{when:D.and(Ns,rW),primary:2066,mac:{primary:2322},weight:200},{when:D.and(sW,el),primary:2060,mac:{primary:267},weight:201}]})}async runWithContext(o,e){let t=e.notebookEditor,i=e.cell,n=t.getCellIndex(i);if(typeof n!=\"number\"||n>=t.getLength()-1)return;let r=i.textBuffer.getLineCount(),a=e.cell??e.selectedCells?.[0],c=a?qve(e,a):void 0;if(c&&c.hasTextFocus()&&gh.get(c)?.getWidgetPosition()?.lineNumber===r)gh.get(c)?.focus();else{let l=t.cellAt(n+1),u=l.cellKind===1&&l.getEditState()===0?\"container\":\"editor\";await t.focusNotebookCell(l,u,{focusEditorLine:1})}}});z(class extends hh{constructor(){super({id:oIs,title:d(24962,null),keybinding:[{when:D.and(Ns,el.negate(),D.equals(\"config.notebook.navigation.allowNavigateToSurroundingCells\",!0),D.and(D.has(zm),Re.editorTextFocus,GTe.notEqualsTo(\"bottom\"),GTe.notEqualsTo(\"none\"),D.or($Te.isEqualTo(\"start\"),$Te.isEqualTo(\"both\"))),Re.isEmbeddedDiffEditor.negate()),primary:16,weight:py},{when:D.and(Ns,el.n"
+    },
+    "navigatePreviousCell": {
+      "characterOffset": 12624171,
+      "excerpt": "tor\";await t.focusNotebookCell(l,u,{focusEditorLine:1})}}});z(class extends hh{constructor(){super({id:oIs,title:d(24962,null),keybinding:[{when:D.and(Ns,el.negate(),D.equals(\"config.notebook.navigation.allowNavigateToSurroundingCells\",!0),D.and(D.has(zm),Re.editorTextFocus,GTe.notEqualsTo(\"bottom\"),GTe.notEqualsTo(\"none\"),D.or($Te.isEqualTo(\"start\"),$Te.isEqualTo(\"both\"))),Re.isEmbeddedDiffEditor.negate()),primary:16,weight:py},{when:D.and(Ns,el.negate(),D.equals(\"config.notebook.navigation.allowNavigateToSurroundingCells\",!0),D.and(jC.isEqualTo(\"markup\"),Uve.isEqualTo(!1),XOt),Re.isEmbeddedDiffEditor.negate()),primary:16,weight:200},{when:D.and(sW,el),primary:2059,mac:{primary:267},weight:201}]})}async runWithContext(o,e){let t=e.notebookEditor,i=e.cell,n=t.getCellIndex(i);if(typeof n!=\"number\"||n<1||t.getLength()===0)return;let r=t.cellAt(n-1),a=r.cellKind===1&&r.getEditState()===0?\"container\":\"editor\",c=r.textBuffer.getLineCount();await t.focusNotebookCell(r,a,{focusEditorLine:c});let l=qve(e,r);l&&gh.get(l)?.getWidgetPosition()?.lineNumber===c&&gh.get(l)?.focus()}});z(class extends Zm{constructor(){super({id:tIs,title:d(24967,null),keybinding:[{when:D.and(Ns,D.not(zm)),primary:2062,weight:200},{when:D.and(Ns,D.not(zm)),mac:{primary:2064},weight:200}]})}async runWithContext(s,o){let e=o.notebookEditor;if(e.getLength()===0)return;let t=e.cellAt(0);await e.focusNotebookCell(t,\"container\")}});z(class extends Zm{constructor(){super({id:iIs,title:d(24968,null),keybinding:[{when:D.and(Ns,D.not(zm)),primary:2061,mac:void 0,weight:200},{when:D.and(Ns,D.not(zm)),mac:{primary:206"
+    },
+    "navigateSetting": {
+      "characterOffset": 12627981,
+      "excerpt": "2)}ge.as(oi.Configuration).registerConfiguration({id:\"notebook\",order:100,type:\"object\",properties:{\"notebook.navigation.allowNavigateToSurroundingCells\":{type:\"boolean\",default:!0,markdownDescription:d(24972,null)}}});var uIs={default:{[Jt.focusIndicator]:\"gutter\",[Jt.insertToolbarLocation]:\"both\",[Jt.globalToolbar]:!0,[Jt.cellToolbarLocation]:{default:\"right\"},[Jt.compactView]:!0,[Jt.showCellStatusBar]:\"visible\",[Jt.consolidatedRunButton]:!0,[Jt.undoRedoPerCell]:!1},jupyter:{[Jt.focusIndicator]:\"gutter\",[Jt.insertToolbarLocation]:\"notebookToolbar\",[Jt.globalToolbar]:!0,[Jt.cellToolbarLocation]:{default:\"left\"},[Jt.compactView]:!0,[Jt.showCellStatusBar]:\"visible\",[Jt.consolidatedRunButton]:!1,[Jt.undoRedoPerCell]:!0},colab:{[Jt.focusIndicator]:\"border\",[Jt.insertToolbarLocation]:\"betweenCells\",[Jt.globalToolbar]:!1,[Jt.cellToolbarLocation]:{default:\"right\"},[Jt.compactView]:!1,[Jt.showCellStatusBar]:\"hidden\",[Jt.consolidatedRunButton]:!0,[Jt.undoRedoPerCell]:!1}};async function pIs(s,o){let e=[];for(let t in o)e.push(s.updateValue(t,o[t]));await Promise.all(e)}z(class extends Q{constructor(){super({id:\"notebook.setProfile\",title:d(24991,null)})}async run(s,o){if(!hIs(o))return;let e=s.get(U);return pIs(e,uIs[o.profile])}});function hIs(s){let o=s;return o.profile===\"colab\"||o.profile===\"default\"||o.profile===\"jupyter\"}var VVt=class{constructor(o,e){this._notebookService=o;this._languageService=e;this.viewType=\"*\"}async provideCellStatusBarItems(o,e,t){let n=this._notebookService.getNotebookTextModel(o)?.cells[e];if(!n)return;let r=[],a=n.language;if(n.cellKind===1)a=\"markd"
+    },
+    "menuAltFocus": {
+      "characterOffset": 7401633,
+      "excerpt": "\")}})}get mnemonicsInUse(){return this._mnemonicsInUse}set mnemonicsInUse(e){this._mnemonicsInUse=e}get shouldAltKeyFocus(){return yt?!1:!this.options.disableAltFocus||this.options.visibility===\"toggle\"}get onVisibilityChange(){return this._onVisibilityChange.event}get onFocusStateChange(){return this._onFocusStateChange.event}onMenuTriggered(e,t){this.isOpen?this.isCurrentMenu(e)?this.setUnfocusedState():(this.cleanupCustomMenu(),this.showCustomMenu(e,this.openedViaKeyboard)):(this.focusedMenu={index:e},this.openedViaKeyboard=!t,this.focusState=3)}onModifierKeyToggled(e){let t=!e.altKey&&!e.ctrlKey&&!e.shiftKey&&!e.metaKey;this.options.visibility!==\"hidden\"&&(e.event&&this.shouldAltKeyFocus&&aC.toEnum(e.event.code)===159&&e.event.preventDefault(),this.isFocused&&e.lastKeyPressed===\"alt\"&&e.altKey&&(this.setUnfocusedState(),this.mnemonicsInUse=!1,this.awaitingAltRelease=!0),t&&e.lastKeyPressed===\"alt\"&&e.lastKeyReleased===\"alt\"&&(this.awaitingAltRelease||(!this.isFocused&&this.shouldAltKeyFocus?(this.mnemonicsInUse=!0,this.focusedMenu={index:this.numMenusShown>0?0:s.OVERFLOW_INDEX},this.focusState=2):this.isOpen||this.setUnfocusedState())),!e.altKey&&e.lastKeyReleased===\"alt\"&&(this.awaitingAltRelease=!1),this.options.enableMnemonics&&this.menus&&!this.isOpen&&this.updateMnemonicVisibility(!this.awaitingAltRelease&&e.altKey||this.mnemonicsInUse))}isCurrentMenu(e){return this.focusedMenu?this.focusedMenu.index===e:!1}cleanupCustomMenu(){this.focusedMenu&&(this.focusedMenu.index===s.OVERFLOW_INDEX?this.overflowMenu.buttonElement.focus():this.menus[this.focusedMenu.index].butt"
+    },
+    "menuSettings": {
+      "characterOffset": 6520603,
+      "excerpt": "\"compact\":\"classic\",scope:1,markdownDescription:yt?d(11187,null):d(11186,null),included:Ai||Tr||$t},\"window.enableMenuBarMnemonics\":{type:\"boolean\",default:!0,scope:1,description:d(11162,null),included:Ai||Tr},\"window.customMenuBarAltFocus\":{type:\"boolean\",default:!0,scope:1,markdownDescription:d(11154,null),included:Ai||Tr,agentsWindow:{default:!1,readOnly:!0}},\"window.openFilesInNewWindow\":{type:\"string\",enum:[\"on\",\"off\",\"default\"],enumDescriptions:[d(11276,null),d(11275,null),yt?d(11274,null):d(11273,null)],default:\"off\",scope:1,markdownDescription:yt?d(11205,null):d(11204,null)},\"window.openFoldersInNewWindow\":{type:\"string\",enum:[\"on\",\"off\",\"default\"],enumDescriptions:[d(11279,null),d(11278,null),d(11277,null)],default:\"default\",scope:1,markdownDescription:d(11206,null)},\"window.confirmBeforeClose\":{type:\"string\",enum:[\"always\",\"keyboardOnly\",\"never\"],enumDescriptions:[$t?d(11261,null):d(11260,null),$t?d(11263,null):d(11262,null),$t?d(11265,null):d(11264,null)],default:$t&&!hxe()?\"keyboardOnly\":\"never\",markdownDescription:$t?d(11152,null):d(11151,null),scope:1}}}),st(LRe.ID,LRe,rt.Eventually),Cbo.registerConfiguration({...Yui,properties:{\"problems.visibility\":{type:\"boolean\",default:!0,description:d(11213,null)}}})})();Js&&ge.as(eu.ConfigurationMigration).registerConfigurationMigrations([[\"workbench.experimental.modernUIFrostedGlass\",\"workbench.modernUIFrostedGlass\"],[\"workbench.experimental.modernUIFrostedGlassOpacity\",\"workbench.modernUIFrostedGlassOpacity\"]].map(([s,o])=>({key:s,includeApplication:!0,migrateFn:(e,t)=>{let i=[];return e!==void 0&&(i.push([s,{value:vo"
+    },
+    "splitCell": {
+      "characterOffset": 12650179,
+      "excerpt": "IIs=\"notebook.cell.joinAbove\",wIs=\"notebook.cell.joinBelow\";z(class extends hh{constructor(){super({id:SIs,title:F(24891,\"Split Cell\"),menu:{id:O.NotebookCellTitle,when:D.and(pu,sT,A9e.toNegated()),order:5,group:IG},icon:j0n,keybinding:{when:D.and(Ns,pu,sT,Re.editorTextFocus),primary:Ho(2089,3165),weight:200}})}async runWithContext(s,o){if(o.notebookEditor.isReadOnly)return;let e=s.get(bl),t=o.cell,i=o.notebookEditor.getCellIndex(t),n=t.focusMode===0?[{lineNumber:1,column:1}]:t.getSelectionsStartPosition();if(n&&n.length>0){if(await t.resolveTextModel(),!t.hasModel())return;let r=LWn(t,n);if(r){let a=t.language,c=t.cellKind,l=t.mime,u=await t.resolveTextModel();await e.apply([new Fl(t.uri,{range:u.getFullModelRange(),text:r[0]}),new NI(o.notebookEditor.textModel.uri,{editType:1,index:i+1,count:0,cells:r.slice(1).map(p=>({cellKind:c,language:a,mime:l,source:p,outputs:[],metadata:{}}))})],{quotableLabel:\"Split Notebook Cell\"}),o.notebookEditor.cellAt(i+1)?.updateEditState(t.getEditState(),\"splitCell\")}}}});z(class extends hh{constructor(){super({id:IIs,title:F(24886,\"Join With Previous Cell\"),keybinding:{when:Ns,primary:1832,weight:200},menu:{id:O.NotebookCellTitle,when:D.and(Ns,pu),group:\"3_edit\",order:10}})}async runWithContext(s,o){let e=s.get(bl);return X_o(e,o,\"above\")}});z(class extends hh{constructor(){super({id:wIs,title:F(24887,\"Join With Next Cell\"),keybinding:{when:Ns,primary:808,weight:200},menu:{id:O.NotebookCellTitle,when:D.and(Ns,pu),group:\"3_edit\",order:11}})}async runWithContext(s,o){let e=s.get(bl);return X_o(e,o,\"below\")}});z(class extends hh{constructor(){"
+    },
+    "moveCell": {
+      "characterOffset": 12648963,
+      "excerpt": "wn\",vIs=\"notebook.cell.copyUp\",bIs=\"notebook.cell.copyDown\";z(class extends hh{constructor(){super({id:gIs,title:F(24890,\"Move Cell Up\"),icon:G0n,keybinding:{primary:528,when:D.and(Ns,Of.toNegated()),weight:200},menu:{id:O.NotebookCellTitle,when:D.equals(\"config.notebook.dragAndDropEnabled\",!1),group:\"3_edit\",order:14}})}async runWithContext(s,o){return Q_o(o,\"up\")}});z(class extends hh{constructor(){super({id:fIs,title:F(24889,\"Move Cell Down\"),icon:$0n,keybinding:{primary:530,when:D.and(Ns,Of.toNegated()),weight:200},menu:{id:O.NotebookCellTitle,when:D.equals(\"config.notebook.dragAndDropEnabled\",!1),group:\"3_edit\",order:14}})}async runWithContext(s,o){return Q_o(o,\"down\")}});z(class extends hh{constructor(){super({id:vIs,title:F(24881,\"Copy Cell Up\"),keybinding:{primary:1552,when:D.and(Ns,Of.toNegated()),weight:200}})}async runWithContext(s,o){return Y_o(o,\"up\")}});z(class extends hh{constructor(){super({id:bIs,title:F(24880,\"Copy Cell Down\"),keybinding:{primary:1554,when:D.and(Ns,Of.toNegated()),weight:200},menu:{id:O.NotebookCellTitle,when:D.and(Ns,pu,sT),group:\"3_edit\",order:13}})}async runWithContext(s,o){return Y_o(o,\"down\")}});var SIs=\"notebook.cell.split\",yIs=\"notebook.cell.joinSelected\",IIs=\"notebook.cell.joinAbove\",wIs=\"notebook.cell.joinBelow\";z(class extends hh{constructor(){super({id:SIs,title:F(24891,\"Split Cell\"),menu:{id:O.NotebookCellTitle,when:D.and(pu,sT,A9e.toNegated()),order:5,group:IG},icon:j0n,keybinding:{when:D.and(Ns,pu,sT,Re.editorTextFocus),primary:Ho(2089,3165),weight:200}})}async runWithContext(s,o){if(o.notebookEditor.isReadOnly)return;let e=s"
+    },
+    "outputFocus": {
+      "characterOffset": 12625947,
+      "excerpt": " n=e.cellAt(i);await e.focusNotebookCell(n,\"container\")}}});z(class extends hh{constructor(){super({id:rIs,title:F(24969,\"Focus In Active Cell Output\"),f1:!0,keybinding:[{when:D.and($C.negate(),bE,$A),primary:2066,weight:200},{primary:3090,mac:{primary:2322},weight:200}],precondition:M0n})}async runWithContext(s,o){let e=o.notebookEditor,t=o.cell;return zi(0).then(()=>e.focusNotebookCell(t,\"output\"))}});z(class extends hh{constructor(){super({id:sIs,title:d(24970,null),keybinding:{primary:3088,mac:{primary:2320},weight:200},precondition:D.and(Ns,rW)})}async runWithContext(s,o){let e=o.notebookEditor,t=o.cell;await e.focusNotebookCell(t,\"editor\")}});z(class extends hh{constructor(){super({id:aOo,title:d(24973,null),keybinding:{when:Ns,primary:2090,mac:{primary:298},weight:200}})}async runWithContext(o,e){return e.notebookEditor.revealInCenter(e.cell)}});z(class extends hh{constructor(){super({id:aIs,title:d(24965,null),keybinding:[{when:D.and(Ns,D.has(zm),Re.editorTextFocus),primary:11,weight:py}]})}async runWithContext(s,o){Kl.getEditorCommand(\"cursorPageUp\").runCommand(s,{pageSize:RPi(o)})}});z(class extends hh{constructor(){super({id:cIs,title:d(24966,null),keybinding:[{when:D.and(Ns,D.has(zm),Re.editorTextFocus,rW.negate()),primary:1035,weight:py}]})}async runWithContext(s,o){Kl.getEditorCommand(\"cursorPageUpSelect\").runCommand(s,{pageSize:RPi(o)})}});z(class extends hh{constructor(){super({id:lIs,title:d(24963,null),keybinding:[{when:D.and(Ns,D.has(zm),Re.editorTextFocus),primary:12,weight:py}]})}async runWithContext(s,o){Kl.getEditorCommand(\"cursorPageDown\").runCommand"
+    },
+    "multicursor": {
+      "characterOffset": 12603158,
+      "excerpt": "s(e.cell,a.findMatches)}else n.selectAllMatches(e.cell)}},tOo=class extends Zm{constructor(){super({id:Yys,title:d(24956,null),precondition:D.and(D.equals(\"config.notebook.multiCursor.enabled\",!0),Rl,sW),keybinding:{when:D.and(D.equals(\"config.notebook.multiCursor.enabled\",!0),Rl,sW),primary:2082,weight:200}})}async runWithContext(o,e){let t=o.get(le),i=Is(t.activeEditorPane);if(!i||!e.cell)return;i.getContribution(rF.id).findAndTrackNextSelection(e.cell)}},iOo=class extends Zm{constructor(){super({id:\"noteMultiCursor.exit\",title:d(24959,null),precondition:D.and(D.equals(\"config.notebook.multiCursor.enabled\",!0),Rl,SR.IsNotebookMultiCursor),keybinding:{when:D.and(D.equals(\"config.notebook.multiCursor.enabled\",!0),Rl,SR.IsNotebookMultiCursor),primary:9,weight:200}})}async runWithContext(o,e){let t=o.get(le),i=Is(t.activeEditorPane);if(!i)return;i.getContribution(rF.id).resetToIdleState()}},oOo=class extends Zm{constructor(){super({id:\"noteMultiCursor.deleteLeft\",title:d(24957,null),precondition:D.and(D.equals(\"config.notebook.multiCursor.enabled\",!0),Rl,SR.IsNotebookMultiCursor,D.or(SR.NotebookMultiSelectCursorState.isEqualTo(1),SR.NotebookMultiSelectCursorState.isEqualTo(2))),keybinding:{when:D.and(D.equals(\"config.notebook.multiCursor.enabled\",!0),Rl,SR.IsNotebookMultiCursor,D.or(SR.NotebookMultiSelectCursorState.isEqualTo(1),SR.NotebookMultiSelectCursorState.isEqualTo(2))),primary:1,weight:200}})}async runWithContext(o,e){let t=o.get(le),i=Is(t.activeEditorPane);if(!i)return;i.getContribution(rF.id).deleteLeft()}},nOo=class extends Zm{constructor(){super({id:\"noteMultiCur"
+    }
+  },
+  "menuSettingDescriptions": {
+    "11154": "Controls whether the menu bar will be focused by pressing the Alt-key. This setting has no effect on toggling the menu bar with the Alt-key.",
+    "11162": "Controls whether the main menus can be opened via Alt-key shortcuts. Disabling mnemonics allows to bind these Alt-key shortcuts to editor commands instead.",
+    "11186": "Control the visibility of the menu bar. A setting of 'toggle' means that the menu bar is hidden and a single press of the Alt key will show it. A setting of 'compact' will move the menu into the side bar."
+  },
+  "configurationUnchanged": true
+}
