@@ -1,0 +1,178 @@
+TAP version 13
+# Subtest: notebook target follows actual cell document URI, not active notebook or selected index
+ok 1 - notebook target follows actual cell document URI, not active notebook or selected index
+  ---
+  duration_ms: 3.83366
+  type: 'test'
+  ...
+# Subtest: Jupyter Markup markdown
+ok 2 - Jupyter Markup markdown
+  ---
+  duration_ms: 1.426442
+  type: 'test'
+  ...
+# Subtest: Jupyter Code markdown
+ok 3 - Jupyter Code markdown
+  ---
+  duration_ms: 0.483526
+  type: 'test'
+  ...
+# Subtest: Jupyter Code latex
+ok 4 - Jupyter Code latex
+  ---
+  duration_ms: 0.817698
+  type: 'test'
+  ...
+# Subtest: Jupyter Code python
+ok 5 - Jupyter Code python
+  ---
+  duration_ms: 0.444592
+  type: 'test'
+  ...
+# Subtest: other notebook Markup
+ok 6 - other notebook Markup
+  ---
+  duration_ms: 0.395519
+  type: 'test'
+  ...
+# Subtest: wrong language Markup
+ok 7 - wrong language Markup
+  ---
+  duration_ms: 0.334875
+  type: 'test'
+  ...
+# Subtest: ordinary Markdown/Python and orphan notebook documents excluded; normal LaTeX remains enabled
+ok 8 - ordinary Markdown/Python and orphan notebook documents excluded; normal LaTeX remains enabled
+  ---
+  duration_ms: 0.446936
+  type: 'test'
+  ...
+# Subtest: closed cell or notebook is excluded
+ok 9 - closed cell or notebook is excluded
+  ---
+  duration_ms: 0.731435
+  type: 'test'
+  ...
+# Subtest: JSONC retains all native snippet syntax, strings, comments in bodies and trailing string commas
+ok 10 - JSONC retains all native snippet syntax, strings, comments in bodies and trailing string commas
+  ---
+  duration_ms: 4.616352
+  type: 'test'
+  ...
+# Subtest: JSONC rejects broken input instead of inventing a replacement snippet
+ok 11 - JSONC rejects broken input instead of inventing a replacement snippet
+  ---
+  duration_ms: 1.984493
+  type: 'test'
+  ...
+# Subtest: entire bundled source retains every prefix, body, description and raw definition
+ok 12 - entire bundled source retains every prefix, body, description and raw definition
+  ---
+  duration_ms: 11.428453
+  type: 'test'
+  ...
+# Subtest: exact semicolon prefix and long compact lines preserve punctuation replacement range
+ok 13 - exact semicolon prefix and long compact lines preserve punctuation replacement range
+  ---
+  duration_ms: 0.597732
+  type: 'test'
+  ...
+# Subtest: Notebook dm prefix expands outside math and semicolon nesting retains parenthesis stop
+ok 14 - Notebook dm prefix expands outside math and semicolon nesting retains parenthesis stop
+  ---
+  duration_ms: 93.809177
+  type: 'test'
+  ...
+# Subtest: Notebook actual pd/bv source reaches only x after ()
+ok 15 - Notebook actual pd/bv source reaches only x after ()
+  ---
+  duration_ms: 33.33469
+  type: 'test'
+  ...
+# Subtest: Notebook actual pd/bv source reaches only x after []
+ok 16 - Notebook actual pd/bv source reaches only x after []
+  ---
+  duration_ms: 26.96063
+  type: 'test'
+  ...
+# Subtest: Notebook actual pd/bv source reaches only x after {}
+ok 17 - Notebook actual pd/bv source reaches only x after {}
+  ---
+  duration_ms: 27.218553
+  type: 'test'
+  ...
+# Subtest: Notebook named original LaTeX snippet uses original body
+ok 18 - Notebook named original LaTeX snippet uses original body
+  ---
+  duration_ms: 11.690448
+  type: 'test'
+  ...
+# Subtest: Notebook live source reload preserves dynamic additions without generated copies
+ok 19 - Notebook live source reload preserves dynamic additions without generated copies
+  ---
+  duration_ms: 19.993394
+  type: 'test'
+  ...
+# Subtest: Notebook completion registration has notebookType and no scheme/pattern restriction
+ok 20 - Notebook completion registration has notebookType and no scheme/pattern restriction
+  ---
+  duration_ms: 9.845602
+  type: 'test'
+  ...
+# Subtest: Notebook completion follows existing LaTeX snippetSuggestions none setting
+ok 21 - Notebook completion follows existing LaTeX snippetSuggestions none setting
+  ---
+  duration_ms: 10.069129
+  type: 'test'
+  ...
+# Subtest: Switching Markdown cells never applies source state to new document
+ok 22 - Switching Markdown cells never applies source state to new document
+  ---
+  duration_ms: 15.901784
+  type: 'test'
+  ...
+# Subtest: Code cell, ordinary md and py direct insert command cannot modify contents
+ok 23 - Code cell, ordinary md and py direct insert command cannot modify contents
+  ---
+  duration_ms: 5.213123
+  type: 'test'
+  ...
+# Subtest: Cell kind change and close invalidate Notebook snippet routing
+ok 24 - Cell kind change and close invalidate Notebook snippet routing
+  ---
+  duration_ms: 11.837007
+  type: 'test'
+  ...
+# Subtest: Stale true prefix context falls back to ordinary Tab outside snippet mode
+ok 25 - Stale true prefix context falls back to ordinary Tab outside snippet mode
+  ---
+  duration_ms: 4.780524
+  type: 'test'
+  ...
+# Subtest: Stale true prefix context advances the current native placeholder
+ok 26 - Stale true prefix context advances the current native placeholder
+  ---
+  duration_ms: 10.637295
+  type: 'test'
+  ...
+# Subtest: Stale false prefix context still expands before plain or snippet navigation
+ok 27 - Stale false prefix context still expands before plain or snippet navigation
+  ---
+  duration_ms: 12.062203
+  type: 'test'
+  ...
+# Subtest: Concurrent document mutation during notebook insertion never overwrites new typing
+ok 28 - Concurrent document mutation during notebook insertion never overwrites new typing
+  ---
+  duration_ms: 4.29291
+  type: 'test'
+  ...
+1..28
+# tests 28
+# suites 0
+# pass 28
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 346.973577

@@ -1,0 +1,422 @@
+{
+  "source": "/mnt/c/Users/p1072/AppData/Roaming/Code/User/snippets/latex.json",
+  "snapshot": "/home/minseok/paper_implementation/ACSSM_implementation/latex-notebook-support/extension/snippets/latex.json",
+  "sha256": "6aef7f54bb425ecdf5c3f0d51c9b2bb881bc0a3f05614289828712d61ea7b3fb",
+  "definitions": 69,
+  "snippets": [
+    {
+      "name": "Inline math",
+      "prefix": "mk",
+      "description": "Inline math",
+      "bodySha256": "187f76a9bcd5c3cf966142a54af8db63ac10f8cb4fd1078c119584665bdc8245"
+    },
+    {
+      "name": "Display math",
+      "prefix": "dm",
+      "description": "Display math block",
+      "bodySha256": "5e9ed4e456d71f3a45907f37874aca8ea562a4d9a00703023d031b90edf57f29"
+    },
+    {
+      "name": "Equation environment",
+      "prefix": "eq",
+      "description": "Numbered equation",
+      "bodySha256": "8314204a4ddd214e6cd9362296fee2c864b772f938141402c30ca84b8e104b2c"
+    },
+    {
+      "name": "Align environment",
+      "prefix": "ali",
+      "description": "Unnumbered align environment",
+      "bodySha256": "157ae3c4daedd219075c8d3e8a31b5fcca15594bee7bb768406893889d14bf03"
+    },
+    {
+      "name": "Align nextline equation",
+      "prefix": "anl",
+      "description": "align nextline equation",
+      "bodySha256": "21b86893c463107e380cc93bb9338a1cec84d67859bf38f2adbf142b075e834d"
+    },
+    {
+      "name": "Align nextline a=b equation ",
+      "prefix": "anle",
+      "description": "align nextline a=b equation",
+      "bodySha256": "1400082880f589b0ccb730b728db1f02bdc9b0a4b1c5048205422b102fbe305a"
+    },
+    {
+      "name": "Generic environment",
+      "prefix": "beg",
+      "description": "Generic begin-end environment",
+      "bodySha256": "da23ce3edda90b035fc1c443cd14c0bf2e04a705af739501d53dad653e471320"
+    },
+    {
+      "name": "Fraction",
+      "prefix": "ff",
+      "description": "Fraction",
+      "bodySha256": "0fdc31b7f3d85a6d051b50383ec79b148da479290ee4fc400ef4a86fa996362a"
+    },
+    {
+      "name": "Fraction 1/2",
+      "prefix": "ff2",
+      "description": "Fraction 1/2",
+      "bodySha256": "427d435f3f73014212459cc83a78ff9f1c61c404057198ca6e4dae9ef29505d9"
+    },
+    {
+      "name": "Square root",
+      "prefix": "sq",
+      "description": "Square root",
+      "bodySha256": "ced4238fe150a8861e14a7d6e2bdc7b62bf35875c6583e6cbea49507cf383039"
+    },
+    {
+      "name": "Ordinary derivative",
+      "prefix": "dd",
+      "description": "Ordinary derivative",
+      "bodySha256": "097ac2466f479dc465ca42ed49c24f72228aeef8afba0383106eee8d7016360a"
+    },
+    {
+      "name": "Second Ordinary derivative",
+      "prefix": "dd2",
+      "description": "Second ordinary derivative",
+      "bodySha256": "56ad3569b967651f24fc445337b8d056a3442f106823396d0fbfc4464b8e98a0"
+    },
+    {
+      "name": "Ordinary derivative fraction",
+      "prefix": "ddx",
+      "description": "Ordinary derivative operator",
+      "bodySha256": "e75426e159291cc960c193cc17779d97906567a74af0bfda82775f9e7d6a6e3d"
+    },
+    {
+      "name": "Partial derivative",
+      "prefix": "pd",
+      "description": "Partial derivative",
+      "bodySha256": "6d85ccad877d47ef19c83c93dbab26c4d7ee4fa7633c358f389d7557105d1c80"
+    },
+    {
+      "name": "Partial derivative fraction",
+      "prefix": "pdx",
+      "description": "Partial derivative operator",
+      "bodySha256": "62fe127e67af7b72001658637a40ab9aabce7b931a47fa1878637862c6353417"
+    },
+    {
+      "name": "Second Partial derivative",
+      "prefix": "pd2",
+      "description": "Second partial derivative",
+      "bodySha256": "cd52776003c2d04c8ccc472c1fba39bcb406da903119071c8fb515197469c065"
+    },
+    {
+      "name": "Second Partial derivative with x and y",
+      "prefix": "pdxy",
+      "description": "Mixed second partial derivative",
+      "bodySha256": "1f0896c6bd60c52341074b7bcc637a079a68db8407c90d61fffd5753f01adcc7"
+    },
+    {
+      "name": "Integral",
+      "prefix": "intt",
+      "description": "Definite integral",
+      "bodySha256": "d0c00be2f2c2983636d9446bfdf5f948da651b2ffa2c3b8a0134bcd6ec4bde1b"
+    },
+    {
+      "name": "Gradient operator",
+      "prefix": "nab",
+      "description": "Gradient Operator",
+      "bodySha256": "fb7680642111ab881b7193385485965ba05e4f0bd3267d80f614cd6576369d03"
+    },
+    {
+      "name": "Summation",
+      "prefix": "summ",
+      "description": "Summation",
+      "bodySha256": "7109582e60a808db37b1ddbe2913eccc7e0c70de4c796cd0e4a1736982624cb8"
+    },
+    {
+      "name": "Summation with out sup",
+      "prefix": "sum",
+      "description": "Summation",
+      "bodySha256": "0ff5ddd0a16e357ad8d719a4ac361601983e577a10a2c3d95e8af5229ed46224"
+    },
+    {
+      "name": "Limit",
+      "prefix": "limm",
+      "description": "Limit",
+      "bodySha256": "024f0e816daf0667dc0c71a6bea1543c0e111cb399825c540a29db351313b400"
+    },
+    {
+      "name": "Product",
+      "prefix": "prod",
+      "description": "Product",
+      "bodySha256": "4375dd834de28fabaad51263aef99bf3547e9871d1ad23adbe32bb837690bfea"
+    },
+    {
+      "name": "Letter Exponential",
+      "prefix": "exp",
+      "description": "Exponential function",
+      "bodySha256": "59c4a1314169fac41ca17218e397710411f6947fc424176bc1685560e1e55ca1"
+    },
+    {
+      "name": "Determinant",
+      "prefix": "det",
+      "description": "Determinant function",
+      "bodySha256": "83c3d3893662520333d78d1656a5ded1d3b4e61326ca7182009cc962a2dfa987"
+    },
+    {
+      "name": "log",
+      "prefix": "log",
+      "description": "Logarithm function",
+      "bodySha256": "69f696ae43bf720ef3231dc3adae8236c1e7888b92d9a4d19e5869bd102da87f"
+    },
+    {
+      "name": "Bold vector",
+      "prefix": "bv",
+      "description": "Bold vector",
+      "bodySha256": "82f83353530af7b5829933aa7d332b9ec35d4114707d8551d00ef7aebe2fc60e"
+    },
+    {
+      "name": "Bold font",
+      "prefix": "bd",
+      "description": "Bold vector",
+      "bodySha256": "5a2f93cb23fdce6bb1eb79a73f22c1b85601e2d75a565cdb32a6050332b343a2"
+    },
+    {
+      "name": "hat operator",
+      "prefix": "hat",
+      "description": "Hat operator",
+      "bodySha256": "e83680da1a00224b0b9406a654b632b240b1e7de6a38ac07b732eec37d20bfb9"
+    },
+    {
+      "name": "bar operator",
+      "prefix": "bar",
+      "description": "Bar operator",
+      "bodySha256": "1a54d684fa94fd194be3d25b24b3148ec3136fcee84d431d9bf5b612c1b18161"
+    },
+    {
+      "name": "tilde operator",
+      "prefix": "til",
+      "description": "Tilde operator",
+      "bodySha256": "e30cbe605d826d8bd32aeb09dd3eccce44f836b237714af7cf9598152d869548"
+    },
+    {
+      "name": "left right bracket Expected value",
+      "prefix": "xplr",
+      "description": "Expected value with auto-sized brackets",
+      "bodySha256": "99ebbd68374ed98e4ae6cce7ee09eead5c3417e83fbbb1e8416a98297c5f9277"
+    },
+    {
+      "name": "Expected value",
+      "prefix": "xpv",
+      "description": "Expected value",
+      "bodySha256": "d763005c84f2a65b71dfcc3962265b12174dd04d74c99560d893bde97a204e0b"
+    },
+    {
+      "name": "Conditional Expected value",
+      "prefix": "xpc",
+      "description": "Conditional Expected value",
+      "bodySha256": "7a6203de9d359adcac934f78b06f72656c4ec1a6a4552beccb1b23ac91290d62"
+    },
+    {
+      "name": "Variance",
+      "prefix": "varr",
+      "description": "Variance",
+      "bodySha256": "151d532cb189f1a0d12dcd3039c840a9b98b8f795e9df0260962662d0df0cc7f"
+    },
+    {
+      "name": "Covariance",
+      "prefix": "covv",
+      "description": "Covariance",
+      "bodySha256": "f61ff1dc94d7a1946d0cd19d0a4926dd3b7a6589a704804d2055faa05a9dd606"
+    },
+    {
+      "name": "Probability",
+      "prefix": "prob",
+      "description": "Probability",
+      "bodySha256": "8cdbb8a60954916e02b6d43cf4575c946ceb1ecd5aa7ced89b0fcc3388760b1d"
+    },
+    {
+      "name": "Conditional probability text Pr",
+      "prefix": "cdp",
+      "description": "Conditional Pr with auto-sized parentheses",
+      "bodySha256": "86ca634aea22dc8e18aff1c776317793b91bfd38d15862d35c63cb3e1bdb4990"
+    },
+    {
+      "name": "auto size Parentheses",
+      "prefix": "lrp",
+      "description": "Auto-sized parentheses",
+      "bodySha256": "ffcc95a7ef2228eed726ad538cd6d142d365175ed87bde488ad13cdcd8cb24f1"
+    },
+    {
+      "name": "auto size Brackets",
+      "prefix": "lrb",
+      "description": "Auto-sized brackets",
+      "bodySha256": "0d163cb3af066fe8df8e7ed463dd96158e3a50284375a93d1d99cef56f383bf4"
+    },
+    {
+      "name": "auto size middle braket",
+      "prefix": "lrm",
+      "description": "Auto-sized middle brackets",
+      "bodySha256": "d24fd5ff07f7c158cfead2dad5a5e38d4eeb4e8376a63b986402a525d26caeb6"
+    },
+    {
+      "name": "auto size conditional braket",
+      "prefix": "cbb",
+      "description": "Auto-sized conditional brackets",
+      "bodySha256": "3bc21d146c20105ec8699b556989d03af07dbaaa81a7c66a938349b80de8172a"
+    },
+    {
+      "name": "auto size conditional parentheses",
+      "prefix": "cpp",
+      "description": "Auto-sized conditional parentheses",
+      "bodySha256": "460753025e35888f3c9df8cb6b1674096127bb44126750146a8d25c68234b815"
+    },
+    {
+      "name": "conditional braket",
+      "prefix": "cb",
+      "description": "Auto-sized conditional brackets",
+      "bodySha256": "ea82504ff40c63f50df57a6ee80954472cddd834fa9a62d997ccbab59e10c98c"
+    },
+    {
+      "name": "parentheses",
+      "prefix": "cp",
+      "description": "Auto-sized conditional parentheses",
+      "bodySha256": "bb2c3024bec0040d0ebb8a1e2bc9ba3b4264419fed92435b6978f53f174e2caa"
+    },
+    {
+      "name": "alpha",
+      "prefix": ";al",
+      "description": "Greek letter alpha",
+      "bodySha256": "123f160fd2189f74fbefe3b633a844a08dfc75a90527fd86d57c956404cd4bc1"
+    },
+    {
+      "name": "beta",
+      "prefix": ";be",
+      "description": "Greek letter beta",
+      "bodySha256": "6d54cb7c1e2bef049f078079edf531d24c3edbe481347401f2f38db0f38f15f5"
+    },
+    {
+      "name": "gamma",
+      "prefix": ";ga",
+      "description": "Greek letter gamma",
+      "bodySha256": "44ac31e41d330631440da75048725909bbe817dbadc9e699f8ceef218e76c465"
+    },
+    {
+      "name": "delta",
+      "prefix": ";de",
+      "description": "Greek letter delta",
+      "bodySha256": "beed9d94cd3586e511355dfd79b2dada89bd3d36e3e96b9b934ad0bd20b04be1"
+    },
+    {
+      "name": "epsilon",
+      "prefix": ";ep",
+      "description": "Greek letter epsilon",
+      "bodySha256": "e2992785719d7d6b5d704444a7218e441346afb707b2665b32f450077f91cf2d"
+    },
+    {
+      "name": "rho",
+      "prefix": ";ro",
+      "description": "Greek letter rho",
+      "bodySha256": "45ec52eb96bcf8fc48b3f29b09fe26ce34afef36fa010f4037c6c9b6ad589c9a"
+    },
+    {
+      "name": "pi",
+      "prefix": ";pi",
+      "description": "Greek letter pi",
+      "bodySha256": "28aee39918cdac85db98272839680277e272c8c3b548fe2709db3105bb26ea86"
+    },
+    {
+      "name": "lambda",
+      "prefix": ";la",
+      "description": "Greek letter lambda",
+      "bodySha256": "9d6a9ef90946dbc17210515d579721cf237d35a1514aec3ab1be3de29d6dc54c"
+    },
+    {
+      "name": "sigma",
+      "prefix": ";si",
+      "description": "Greek letter sigma",
+      "bodySha256": "4ae6df6247763537c85ce3b97814f9319a6db5ebfc4b2867f89d884b3bcd9df9"
+    },
+    {
+      "name": "Sigma",
+      "prefix": ";Si",
+      "description": "Greek letter Sigma",
+      "bodySha256": "dc7ca5c3848a9ca70d628816c5e4bc8fc1f063eeba70b4e2bf81c438ec63f205"
+    },
+    {
+      "name": "theta",
+      "prefix": ";th",
+      "description": "Greek letter theta",
+      "bodySha256": "7118658c00e3263b3fd46a3e831b79901627b9ef64f60174b5f193fc71c929ef"
+    },
+    {
+      "name": "phi",
+      "prefix": ";ph",
+      "description": "Greek letter phi",
+      "bodySha256": "a94ddaf9f89d6e2461e4a5849f4f09a10edc0546a3176a51cea3083b8931a717"
+    },
+    {
+      "name": "mu",
+      "prefix": ";mu",
+      "description": "Greek letter mu",
+      "bodySha256": "15eb0468c075be3b11b19ac4e87953f36ab0f0ed250790c19c51d1d4cf8387cb"
+    },
+    {
+      "name": "nu",
+      "prefix": ";nu",
+      "description": "Greek letter nu",
+      "bodySha256": "dcdeb3a8b94bec063955b1583e69dd35250d0c9cb5b669b55bbc8b0916445ccb"
+    },
+    {
+      "name": "ell",
+      "prefix": ";el",
+      "description": "Greek letter ell",
+      "bodySha256": "271a632dc438c0cc11af2b1f28a90eecdc1f24a9f680e0d0e8b2f5f57d586d9c"
+    },
+    {
+      "name": "text",
+      "prefix": "tt",
+      "description": "Input text",
+      "bodySha256": "cb41f2150ea3147ba202e670816ac6da53a57ca9d1d232a0ad40be06bd77d079"
+    },
+    {
+      "name": "Fraktur font",
+      "prefix": "mc",
+      "description": "Fraktur font",
+      "bodySha256": "1c8680c8c8e3394b3334f4433939334ff07738ec9f7f0f83d2a4830cf3f3e884"
+    },
+    {
+      "name": "Blackboard Bold font",
+      "prefix": "mb",
+      "description": "Blackboard bold font ( for set symbol )",
+      "bodySha256": "7db19cc814bded96c8a944ab585af6e5b4ed90cc7919e685b1508b7516a79407"
+    },
+    {
+      "name": "chemistry",
+      "prefix": "ce",
+      "description": "Chemical formula",
+      "bodySha256": "6e0ac03e860b38fa59949fffbb8aab3c02c684c74a4e09fdec69f9c62c803af6"
+    },
+    {
+      "name": "right arrow with upper symbol",
+      "prefix": "xra",
+      "description": "right arrow with upper symbol",
+      "bodySha256": "d748a6978572aea750f9c8a884cc6abe102bfca3dcbd2fd471ad78efc570d912"
+    },
+    {
+      "name": "downarrow with newlines",
+      "prefix": "drn",
+      "description": "Downarrow with newlines",
+      "bodySha256": "39274765b75a7ba763b0ce6b08752a4d90fecad11153624f8e20437fb51fbb3b"
+    },
+    {
+      "name": "Infinity",
+      "prefix": "infi",
+      "description": "infinity symbol",
+      "bodySha256": "f5abd37cfccfd46608b0d450ebbc1a50b50686ab1c21c20b190852472b16e1c6"
+    },
+    {
+      "name": "quad",
+      "prefix": "qu",
+      "description": "quad white character",
+      "bodySha256": "09df93bb049f9e2d00f75dfadf340a74911ecfde12640a9b15dda396aa61c733"
+    },
+    {
+      "name": "qquad",
+      "prefix": "qq",
+      "description": "qquad white character",
+      "bodySha256": "598796ac39b375c1e0e86f226db1f31b9e08f21f21633a21d87584a5e48dd8d8"
+    }
+  ]
+}

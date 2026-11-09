@@ -1,0 +1,395 @@
+{
+	"name": "latex-smart-tab-dispatcher",
+	"displayName": "LaTeX Smart Tab Dispatcher — Notebook Markdown",
+	"description": "Reuse LaTeX snippets and native Tab navigation in Jupyter Markdown cell editors.",
+	"version": "0.4.0",
+	"publisher": "local-latex",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.99.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"extensionKind": [
+		"workspace"
+	],
+	"activationEvents": [
+		"onStartupFinished",
+		"onCommand:latexSmartTab.expandSnippet",
+		"onCommand:latexSmartTab.navigateSnippet",
+		"onCommand:latexSmartTab.navigatePlain",
+		"onCommand:latexSmartTab.insertSnippetTemplate",
+		"onCommand:latexSmartTab.insertContinuationSpace",
+		"onCommand:latexSmartTab.diagnosticsStart",
+		"onCommand:latexSmartTab.diagnosticsMark",
+		"onCommand:latexSmartTab.diagnosticsExport",
+		"onCommand:latexSmartTab.runRegressionChecks",
+		"onNotebook:jupyter-notebook",
+		"onLanguage:markdown",
+		"onLanguage:latex"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "latexSmartTab.expandSnippet",
+				"title": "LaTeX Smart Tab: Expand Exact Snippet Prefix"
+			},
+			{
+				"command": "latexSmartTab.navigateSnippet",
+				"title": "LaTeX Smart Tab: Escape Inner Token or Next Placeholder"
+			},
+			{
+				"command": "latexSmartTab.navigatePlain",
+				"title": "LaTeX Smart Tab: Escape Token or Ordinary Tab"
+			},
+			{
+				"command": "latexSmartTab.insertSnippetTemplate",
+				"title": "LaTeX Smart Tab: Insert Tracked Snippet Template"
+			},
+			{
+				"command": "latexSmartTab.insertContinuationSpace",
+				"title": "LaTeX Smart Tab: Preserve Untouched Terminal Default and Insert Space"
+			},
+			{
+				"command": "latexSmartTab.diagnosticsStart",
+				"title": "LaTeX Smart Tab Diagnostics: Start Recording"
+			},
+			{
+				"command": "latexSmartTab.diagnosticsMark",
+				"title": "LaTeX Smart Tab Diagnostics: Mark Context"
+			},
+			{
+				"command": "latexSmartTab.diagnosticsExport",
+				"title": "LaTeX Smart Tab Diagnostics: Export Recording"
+			},
+			{
+				"command": "latexSmartTab.runRegressionChecks",
+				"title": "LaTeX Smart Tab: Run Regression Checks"
+			},
+			{
+				"command": "latexSmartTab.insertNotebookSnippet",
+				"title": "LaTeX Smart Tab: Insert LaTeX Snippet in Notebook Markdown"
+			},
+			{
+				"command": "latexSmartTab.reloadNotebookSnippets",
+				"title": "LaTeX Smart Tab: Reload Notebook LaTeX Snippets"
+			}
+		],
+		"configuration": {
+			"title": "LaTeX Smart Tab",
+			"properties": {
+				"latexSmartTab.skipBlankChar": {
+					"type": "boolean",
+					"default": true,
+					"description": "Allow Tab to cross whitespace before an eligible closing token."
+				},
+				"latexSmartTab.enableMultilineMode": {
+					"type": "boolean",
+					"default": true,
+					"description": "Allow Tab to find a closing token on the next nonblank line. In snippet mode it must still lie inside the current placeholder."
+				},
+				"latexSmartTab.escapeTypedClosersAcrossPlaceholder": {
+					"type": "boolean",
+					"default": true,
+					"description": "Let an immediately adjacent closer created by ordinary typing or auto-pairing escape before an outer snippet tab stop, even when it lies just beyond the current nested placeholder."
+				},
+				"latexSmartTab.recoverSequentialArguments": {
+					"type": "boolean",
+					"default": true,
+					"description": "Treat a closing brace followed by another balanced braced argument as a transition to that next argument instead of a cursor stop in the `}{` gap."
+				},
+				"latexSmartTab.recoverLongLineSnippetPrefixes": {
+					"type": "boolean",
+					"default": true,
+					"description": "Recover exact static snippet prefixes that VS Code misses after more than 100 consecutive non-whitespace characters on a compact line."
+				},
+				"latexSmartTab.prefixProbeCharacters": {
+					"type": "string",
+					"default": "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_;",
+					"description": "Characters allowed in the final prefix token used by long-line snippet recovery. The default covers the reviewed alphanumeric and semicolon-prefixed snippets."
+				},
+				"latexSmartTab.preserveUntouchedTerminalDefaultOnSpace": {
+					"type": "boolean",
+					"default": true,
+					"description": "When an untouched selected default is the terminal field of its creating snippet, Space preserves it and inserts a space after it. Earlier placeholders retain native replacement behavior."
+				},
+				"latexSmartTab.closingTokens": {
+					"type": "array",
+					"description": "Closing tokens that Smart Tab may cross, longest matches first.",
+					"default": [
+						"\\end{multline}",
+						"\\end{multline*}",
+						"\\end{gather}",
+						"\\end{gather*}",
+						"\\end{flalign}",
+						"\\end{flalign*}",
+						"\\end{alignat}",
+						"\\end{alignat*}",
+						"\\end{displaymath}",
+						"\\end{equation*}",
+						"\\end{equation}",
+						"\\end{align*}",
+						"\\end{aligned}",
+						"\\end{align}",
+						"\\end{bmatrix}",
+						"\\end{pmatrix}",
+						"\\end{vmatrix}",
+						"\\end{Vmatrix}",
+						"\\end{cases}",
+						"\\right\\rangle",
+						"\\right\\}",
+						"\\right)",
+						"\\right]",
+						"\\rangle",
+						"\\)",
+						"\\]",
+						"}",
+						")",
+						"]"
+					],
+					"items": {
+						"type": "string"
+					}
+				},
+				"latexSmartTab.exitBlockClosersToNextLine": {
+					"type": "boolean",
+					"default": true,
+					"description": "When a standalone display-math closer is crossed, place the cursor on the following line instead of immediately after the closing token."
+				},
+				"latexSmartTab.blockClosingTokens": {
+					"type": "array",
+					"description": "Standalone block-level closing tokens whose exit target is the following line. Nested structures such as bmatrix and aligned are intentionally excluded.",
+					"default": [
+						"\\]",
+						"\\end{displaymath}",
+						"\\end{equation*}",
+						"\\end{equation}",
+						"\\end{alignat*}",
+						"\\end{alignat}",
+						"\\end{align*}",
+						"\\end{align}",
+						"\\end{flalign*}",
+						"\\end{flalign}",
+						"\\end{gather*}",
+						"\\end{gather}",
+						"\\end{multline*}",
+						"\\end{multline}"
+					],
+					"items": {
+						"type": "string"
+					}
+				},
+				"latexSmartTab.enableDefaultTabKeybindings": {
+					"type": "boolean",
+					"default": true,
+					"description": "Provide Tab routing unless overridden by user keybindings. Disable to keep only custom user bindings."
+				},
+				"latexSmartTab.notebookSnippetSource": {
+					"type": "string",
+					"default": "",
+					"scope": "machine-overridable",
+					"description": "Absolute path readable by the extension host to the active profile latex.json (JSONC). Read live when prefix/context changes; empty uses the packaged snapshot. In WSL, use /mnt/c/... for a Windows profile source."
+				}
+			}
+		},
+		"keybindings": [
+			{
+				"key": "space",
+				"command": "latexSmartTab.insertContinuationSpace",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && inSnippetMode && editorHasSelection && config.latexSmartTab.preserveUntouchedTerminalDefaultOnSpace"
+			},
+			{
+				"key": "ctrl+alt+f12",
+				"command": "latexSmartTab.diagnosticsMark",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !inSnippetMode && !hasNextTabstop",
+				"args": {
+					"inSnippetMode": false,
+					"hasNextTabstop": false
+				}
+			},
+			{
+				"key": "ctrl+alt+f12",
+				"command": "latexSmartTab.diagnosticsMark",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !inSnippetMode && hasNextTabstop",
+				"args": {
+					"inSnippetMode": false,
+					"hasNextTabstop": true
+				}
+			},
+			{
+				"key": "ctrl+alt+f12",
+				"command": "latexSmartTab.diagnosticsMark",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && inSnippetMode && !hasNextTabstop",
+				"args": {
+					"inSnippetMode": true,
+					"hasNextTabstop": false
+				}
+			},
+			{
+				"key": "ctrl+alt+f12",
+				"command": "latexSmartTab.diagnosticsMark",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && inSnippetMode && hasNextTabstop",
+				"args": {
+					"inSnippetMode": true,
+					"hasNextTabstop": true
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.navigatePlain",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && !inSnippetMode && !hasNextTabstop",
+				"args": {
+					"inSnippetMode": false,
+					"hasNextTabstop": false
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.navigatePlain",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && !inSnippetMode && hasNextTabstop",
+				"args": {
+					"inSnippetMode": false,
+					"hasNextTabstop": true
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.navigateSnippet",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && inSnippetMode && !hasNextTabstop",
+				"args": {
+					"inSnippetMode": true,
+					"hasNextTabstop": false
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.navigateSnippet",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && inSnippetMode && hasNextTabstop",
+				"args": {
+					"inSnippetMode": true,
+					"hasNextTabstop": true
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.expandSnippet",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && hasSnippetCompletions && !editorHasSelection && !inSnippetMode",
+				"args": {
+					"inSnippetMode": false,
+					"hasSnippetCompletions": true
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.expandSnippet",
+				"when": "editorTextFocus && (editorLangId == latex && !notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && hasSnippetCompletions && !editorHasSelection && inSnippetMode",
+				"args": {
+					"inSnippetMode": true,
+					"hasSnippetCompletions": true
+				}
+			},
+			{
+				"key": "space",
+				"command": "latexSmartTab.insertContinuationSpace",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorHasMultipleSelections && inSnippetMode && editorHasSelection && config.latexSmartTab.preserveUntouchedTerminalDefaultOnSpace"
+			},
+			{
+				"key": "ctrl+alt+f12",
+				"command": "latexSmartTab.diagnosticsMark",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !inSnippetMode && !hasNextTabstop",
+				"args": {
+					"inSnippetMode": false,
+					"hasNextTabstop": false
+				}
+			},
+			{
+				"key": "ctrl+alt+f12",
+				"command": "latexSmartTab.diagnosticsMark",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !inSnippetMode && hasNextTabstop",
+				"args": {
+					"inSnippetMode": false,
+					"hasNextTabstop": true
+				}
+			},
+			{
+				"key": "ctrl+alt+f12",
+				"command": "latexSmartTab.diagnosticsMark",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && inSnippetMode && !hasNextTabstop",
+				"args": {
+					"inSnippetMode": true,
+					"hasNextTabstop": false
+				}
+			},
+			{
+				"key": "ctrl+alt+f12",
+				"command": "latexSmartTab.diagnosticsMark",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && inSnippetMode && hasNextTabstop",
+				"args": {
+					"inSnippetMode": true,
+					"hasNextTabstop": true
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.navigatePlain",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && !inSnippetMode && !hasNextTabstop",
+				"args": {
+					"inSnippetMode": false,
+					"hasNextTabstop": false
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.navigatePlain",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && !inSnippetMode && hasNextTabstop",
+				"args": {
+					"inSnippetMode": false,
+					"hasNextTabstop": true
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.navigateSnippet",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && inSnippetMode && !hasNextTabstop",
+				"args": {
+					"inSnippetMode": true,
+					"hasNextTabstop": false
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.navigateSnippet",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && inSnippetMode && hasNextTabstop",
+				"args": {
+					"inSnippetMode": true,
+					"hasNextTabstop": true
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.expandSnippet",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && latexSmartTab.notebookHasSnippetCompletions && !editorHasSelection && !inSnippetMode",
+				"args": {
+					"inSnippetMode": false,
+					"hasSnippetCompletions": true
+				}
+			},
+			{
+				"key": "tab",
+				"command": "latexSmartTab.expandSnippet",
+				"when": "editorTextFocus && (notebookType == jupyter-notebook && notebookCellType == markup && editorLangId == markdown && notebookCellEditorFocused) && !editorReadonly && !editorTabMovesFocus && !editorHasMultipleSelections && config.latexSmartTab.enableDefaultTabKeybindings && latexSmartTab.notebookHasSnippetCompletions && !editorHasSelection && inSnippetMode",
+				"args": {
+					"inSnippetMode": true,
+					"hasSnippetCompletions": true
+				}
+			}
+		]
+	},
+	"scripts": {
+		"test": "node --test test/unit/*.test.js",
+		"test:host": "node scripts/run-host-tests.js",
+		"package": "python3 scripts/package.py"
+	}
+}

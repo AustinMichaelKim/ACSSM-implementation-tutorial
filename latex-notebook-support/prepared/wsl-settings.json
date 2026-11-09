@@ -1,0 +1,91 @@
+{
+  "C_Cpp.autocomplete": "disabled",
+  "python.createEnvironment.trigger": "off",
+
+  // LaTeX Workshop settings
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoClean.run": "onFailed",
+  "latex-workshop.view.pdf.zoom": "page-width",
+  "latex-workshop.view.pdf.scrollMode": 0,
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+  "workbench.editor.dragToOpenWindow": true,
+
+  // LaTeX Smart Tab settings
+  "latexSmartTab.skipBlankChar": true,
+  "latexSmartTab.enableMultilineMode": true,
+
+  
+  "latexSmartTab.recoverLongLineSnippetPrefixes": true,
+
+  "latexSmartTab.prefixProbeCharacters":
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_;",
+
+  "latexSmartTab.closingTokens": [
+    "\\end{equation*}",
+    "\\end{equation}",
+    "\\end{align*}",
+    "\\end{aligned}",
+    "\\end{align}",
+    "\\end{bmatrix}",
+    "\\end{pmatrix}",
+    "\\end{vmatrix}",
+    "\\end{Vmatrix}",
+    "\\end{cases}",
+    "\\right\\rangle",
+    "\\right\\}",
+    "\\right)",
+    "\\right]",
+    "\\rangle",
+    "\\)",
+    "\\]",
+    "}",
+    ")",
+    "]",
+    "\\rfloor",
+    "\\rceil",
+    "\\rbrace",
+    "\\}",
+    "\\rvert",
+    "\\rVert",
+    "\\right|",
+    "\\right\\vert",
+    "\\right\\Vert",
+    "\\right."
+  ],
+
+  "latexSmartTab.exitBlockClosersToNextLine": true,
+
+  "latexSmartTab.blockClosingTokens": [
+    "\\]",
+    "\\end{displaymath}",
+    "\\end{equation*}",
+    "\\end{equation}",
+    "\\end{alignat*}",
+    "\\end{alignat}",
+    "\\end{align*}",
+    "\\end{align}",
+    "\\end{flalign*}",
+    "\\end{flalign}",
+    "\\end{gather*}",
+    "\\end{gather}",
+    "\\end{multline*}",
+    "\\end{multline}"
+  ],
+  
+
+  "[latex]": {
+    "editor.wordWrap": "on",
+
+    "editor.tabCompletion": "onlySnippets",
+
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+
+    "editor.snippetSuggestions": "none",
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+
+    // Jupyter Markdown editing: LaTeX Smart Tab
+    "latexSmartTab.notebookSnippetSource": "/mnt/c/Users/p1072/AppData/Roaming/Code/User/snippets/latex.json"
+}

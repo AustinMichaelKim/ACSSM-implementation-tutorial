@@ -1,0 +1,9 @@
+{
+  "crcValid": true,
+  "manifestVersion": "0.4.0",
+  "runtimeAndSnapshotMatchSource": true,
+  "noGlobalMarkdownSnippets": true,
+  "noStaleInstalledManifest": true,
+  "sha256": "9c1cd6b799a51eeb3a08a1758321b8a0233ca2a756ecf30c6fa02e482e6830fe",
+  "bytes": 125555
+}

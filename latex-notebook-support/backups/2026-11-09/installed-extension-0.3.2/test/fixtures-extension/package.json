@@ -1,0 +1,6 @@
+{
+  "name":"smart-tab-test-fixtures","publisher":"local-latex","version":"0.0.0",
+  "displayName":"Smart Tab isolated test fixtures (NOT for normal installation)",
+  "engines":{"vscode":"^1.99.0"},"license":"MIT",
+  "contributes":{"snippets":[{"language":"latex","path":"./snippets/latex.json"}]}
+}

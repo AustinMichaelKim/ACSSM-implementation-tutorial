@@ -1,0 +1,8 @@
+{
+  "extension.js": "0db90d3c1f058153bea10d9a8587dbaf053fcb0ae83f7d44d3e02ca473e69bd3",
+  "core.js": "04b193ea30351757573d54833d117107c0efabd609d37687a30f015f682ae7e2",
+  "boundary-hop.js": "3397ef54be6ae45125c989718a6af562819e0ccdb76395f7c54c1c4693a93fa5",
+  "notebook-support.js": "654bea2052382b7c9dca07aacc0ab7a7ec59d6d3937145ee2e4afa66c9f52df6",
+  "package.json": "7a3d975bd6dc3672c3b0afe58d8ad750bc616010a2ded4e0647431f5d75022f6",
+  "snippets/latex.json": "6aef7f54bb425ecdf5c3f0d51c9b2bb881bc0a3f05614289828712d61ea7b3fb"
+}

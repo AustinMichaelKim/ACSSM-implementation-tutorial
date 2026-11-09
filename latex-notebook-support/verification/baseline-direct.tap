@@ -1,0 +1,758 @@
+FILE test/unit/baseline.test.js
+TAP version 13
+# Subtest: CONTROL: original 0.3.1 reproduces theta -> outside dm
+ok 1 - CONTROL: original 0.3.1 reproduces theta -> outside dm
+  ---
+  duration_ms: 32.084948
+  type: 'test'
+  ...
+# Subtest: CONTROL: original 0.3.1 skips parenthesis stop in pd
+ok 2 - CONTROL: original 0.3.1 skips parenthesis stop in pd
+  ---
+  duration_ms: 13.839991
+  type: 'test'
+  ...
+# Subtest: CONTROL: original inside-placeholder next/prev probe cancels root session
+ok 3 - CONTROL: original inside-placeholder next/prev probe cancels root session
+  ---
+  duration_ms: 14.669479
+  type: 'test'
+  ...
+# Subtest: CONTROL: diagnostic-style manual cursor crossing loses x topology
+ok 4 - CONTROL: diagnostic-style manual cursor crossing loses x topology
+  ---
+  duration_ms: 12.904817
+  type: 'test'
+  ...
+# Subtest: CONTROL: original token end affinity absorbs unrelated text
+ok 5 - CONTROL: original token end affinity absorbs unrelated text
+  ---
+  duration_ms: 0.85574
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 87.501134
+FILE test/unit/core.test.js
+TAP version 13
+# Subtest: offset affinity left
+ok 1 - offset affinity left
+  ---
+  duration_ms: 3.655063
+  type: 'test'
+  ...
+# Subtest: offset affinity right
+ok 2 - offset affinity right
+  ---
+  duration_ms: 0.339654
+  type: 'test'
+  ...
+# Subtest: placeholder grows at both edges
+ok 3 - placeholder grows at both edges
+  ---
+  duration_ms: 1.400572
+  type: 'test'
+  ...
+# Subtest: concrete closer does not absorb insertion after its end
+ok 4 - concrete closer does not absorb insertion after its end
+  ---
+  duration_ms: 0.581301
+  type: 'test'
+  ...
+# Subtest: concrete closer shifts at its start
+ok 5 - concrete closer shifts at its start
+  ---
+  duration_ms: 0.440414
+  type: 'test'
+  ...
+# Subtest: multiple old-coordinate changes accumulate
+ok 6 - multiple old-coordinate changes accumulate
+  ---
+  duration_ms: 0.229024
+  type: 'test'
+  ...
+# Subtest: token deletion collapses rather than inventing negative ranges
+ok 7 - token deletion collapses rather than inventing negative ranges
+  ---
+  duration_ms: 0.450543
+  type: 'test'
+  ...
+# Subtest: token normalization rejects nonstrings and duplicates; longest wins
+ok 8 - token normalization rejects nonstrings and duplicates; longest wins
+  ---
+  duration_ms: 0.439512
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["x)",1]
+ok 9 - token lexical guard ["x)",1]
+  ---
+  duration_ms: 1.111846
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["x  )",1]
+ok 10 - token lexical guard ["x  )",1]
+  ---
+  duration_ms: 1.197659
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["x\\\\right)",1]
+ok 11 - token lexical guard ["x\\\\right)",1]
+  ---
+  duration_ms: 0.306972
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["x\\\\rangle",1]
+ok 12 - token lexical guard ["x\\\\rangle",1]
+  ---
+  duration_ms: 0.396531
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["% x)",3]
+ok 13 - token lexical guard ["% x)",3]
+  ---
+  duration_ms: 2.611837
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["x\\\\}",2]
+ok 14 - token lexical guard ["x\\\\}",2]
+  ---
+  duration_ms: 1.247547
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["x\\\\rangles",1]
+ok 15 - token lexical guard ["x\\\\rangles",1]
+  ---
+  duration_ms: 0.474825
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["x\\\\\\\\]",1]
+ok 16 - token lexical guard ["x\\\\\\\\]",1]
+  ---
+  duration_ms: 0.264651
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["x\\\\% )",4]
+ok 17 - token lexical guard ["x\\\\% )",4]
+  ---
+  duration_ms: 0.428401
+  type: 'test'
+  ...
+# Subtest: token lexical guard ["x\\\\\\\\ )",4]
+ok 18 - token lexical guard ["x\\\\\\\\ )",4]
+  ---
+  duration_ms: 0.170152
+  type: 'test'
+  ...
+# Subtest: skipBlankChar false does not cross spaces
+ok 19 - skipBlankChar false does not cross spaces
+  ---
+  duration_ms: 0.519444
+  type: 'test'
+  ...
+# Subtest: bounded closer cannot cross active field end
+ok 20 - bounded closer cannot cross active field end
+  ---
+  duration_ms: 1.255823
+  type: 'test'
+  ...
+# Subtest: inserted token scanner ignores comments and escaped suffixes
+ok 21 - inserted token scanner ignores comments and escaped suffixes
+  ---
+  duration_ms: 0.716773
+  type: 'test'
+  ...
+# Subtest: long-prefix probe length 99
+ok 22 - long-prefix probe length 99
+  ---
+  duration_ms: 0.488695
+  type: 'test'
+  ...
+# Subtest: long-prefix probe length 100
+ok 23 - long-prefix probe length 100
+  ---
+  duration_ms: 0.258459
+  type: 'test'
+  ...
+# Subtest: long-prefix probe length 101
+ok 24 - long-prefix probe length 101
+  ---
+  duration_ms: 0.915022
+  type: 'test'
+  ...
+# Subtest: long-prefix probe length 250
+ok 25 - long-prefix probe length 250
+  ---
+  duration_ms: 0.255053
+  type: 'test'
+  ...
+# Subtest: long-prefix probe length 1000
+ok 26 - long-prefix probe length 1000
+  ---
+  duration_ms: 0.260634
+  type: 'test'
+  ...
+# Subtest: long-prefix conservative rejection xxxxx\\ff
+ok 27 - long-prefix conservative rejection xxxxx\\ff
+  ---
+  duration_ms: 0.342249
+  type: 'test'
+  ...
+# Subtest: long-prefix conservative rejection xxxxx ff
+ok 28 - long-prefix conservative rejection xxxxx ff
+  ---
+  duration_ms: 0.106292
+  type: 'test'
+  ...
+# Subtest: long-prefix conservative rejection xxxxxxx}
+ok 29 - long-prefix conservative rejection xxxxxxx}
+  ---
+  duration_ms: 0.087365
+  type: 'test'
+  ...
+# Subtest: long-prefix conservative rejection ffffffff
+ok 30 - long-prefix conservative rejection ffffffff
+  ---
+  duration_ms: 0.170112
+  type: 'test'
+  ...
+# Subtest: semicolon prefix survives long-line probe
+ok 31 - semicolon prefix survives long-line probe
+  ---
+  duration_ms: 0.30113
+  type: 'test'
+  ...
+# Subtest: standalone block   \\]
+ok 32 - standalone block   \\]
+  ---
+  duration_ms: 0.302223
+  type: 'test'
+  ...
+# Subtest: standalone block   \\] % done
+ok 33 - standalone block   \\] % done
+  ---
+  duration_ms: 0.180612
+  type: 'test'
+  ...
+# Subtest: standalone block a\\]
+ok 34 - standalone block a\\]
+  ---
+  duration_ms: 0.209747
+  type: 'test'
+  ...
+# Subtest: standalone block   \\]x
+ok 35 - standalone block   \\]x
+  ---
+  duration_ms: 0.233662
+  type: 'test'
+  ...
+# Subtest: standalone block \\end{bmatrix}
+ok 36 - standalone block \\end{bmatrix}
+  ---
+  duration_ms: 0.220988
+  type: 'test'
+  ...
+# Subtest: entry character honors tabs and indentation
+ok 37 - entry character honors tabs and indentation
+  ---
+  duration_ms: 0.303695
+  type: 'test'
+  ...
+# Subtest: hop plan rejects invalid boundaries
+ok 38 - hop plan rejects invalid boundaries
+  ---
+  duration_ms: 0.384388
+  type: 'test'
+  ...
+# Subtest: upstream marker kernel: one atomic delete+insert reanchors point and caret
+ok 39 - upstream marker kernel: one atomic delete+insert reanchors point and caret
+  ---
+  duration_ms: 12.356296
+  type: 'test'
+  ...
+# Subtest: same-text replace is NOT equivalent to insert+delete
+ok 40 - same-text replace is NOT equivalent to insert+delete
+  ---
+  duration_ms: 0.380451
+  type: 'test'
+  ...
+# Subtest: boundary operation is text identity for 1000 UTF-16 ranges
+ok 41 - boundary operation is text identity for 1000 UTF-16 ranges
+  ---
+  duration_ms: 5.686152
+  type: 'test'
+  ...
+1..41
+# tests 41
+# suites 0
+# pass 41
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 116.427067
+FILE test/unit/host-suite-smoke.test.js
+TAP version 13
+# Subtest: real-host suite fixture logic smoke-tested in model, never labelled real host
+ok 1 - real-host suite fixture logic smoke-tested in model, never labelled real host
+  ---
+  duration_ms: 899.549654
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 909.393037
+FILE test/unit/navigation.test.js
+TAP version 13
+# Subtest: display math Greek prefix ;th
+ok 1 - display math Greek prefix ;th
+  ---
+  duration_ms: 46.471246
+  type: 'test'
+  ...
+# Subtest: display math Greek prefix ;al
+ok 2 - display math Greek prefix ;al
+  ---
+  duration_ms: 14.138096
+  type: 'test'
+  ...
+# Subtest: display math Greek prefix ;si
+ok 3 - display math Greek prefix ;si
+  ---
+  duration_ms: 11.549755
+  type: 'test'
+  ...
+# Subtest: ordinary parentheses retain native outer session
+ok 4 - ordinary parentheses retain native outer session
+  ---
+  duration_ms: 7.798931
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair=none nested=none
+ok 5 - pd wrapped=false pair=none nested=none
+  ---
+  duration_ms: 7.987507
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair=none nested=bm
+ok 6 - pd wrapped=false pair=none nested=bm
+  ---
+  duration_ms: 12.713965
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair=none nested=hat
+ok 7 - pd wrapped=false pair=none nested=hat
+  ---
+  duration_ms: 14.736115
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair=() nested=none
+ok 8 - pd wrapped=false pair=() nested=none
+  ---
+  duration_ms: 10.116261
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair=() nested=bm
+ok 9 - pd wrapped=false pair=() nested=bm
+  ---
+  duration_ms: 14.042907
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair=() nested=hat
+ok 10 - pd wrapped=false pair=() nested=hat
+  ---
+  duration_ms: 15.328793
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair=[] nested=none
+ok 11 - pd wrapped=false pair=[] nested=none
+  ---
+  duration_ms: 10.767172
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair=[] nested=bm
+ok 12 - pd wrapped=false pair=[] nested=bm
+  ---
+  duration_ms: 13.757847
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair=[] nested=hat
+ok 13 - pd wrapped=false pair=[] nested=hat
+  ---
+  duration_ms: 12.140183
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair={} nested=none
+ok 14 - pd wrapped=false pair={} nested=none
+  ---
+  duration_ms: 7.047027
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair={} nested=bm
+ok 15 - pd wrapped=false pair={} nested=bm
+  ---
+  duration_ms: 12.495727
+  type: 'test'
+  ...
+# Subtest: pd wrapped=false pair={} nested=hat
+ok 16 - pd wrapped=false pair={} nested=hat
+  ---
+  duration_ms: 13.403185
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair=none nested=none
+ok 17 - pd wrapped=true pair=none nested=none
+  ---
+  duration_ms: 8.820211
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair=none nested=bm
+ok 18 - pd wrapped=true pair=none nested=bm
+  ---
+  duration_ms: 11.829118
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair=none nested=hat
+ok 19 - pd wrapped=true pair=none nested=hat
+  ---
+  duration_ms: 13.155321
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair=() nested=none
+ok 20 - pd wrapped=true pair=() nested=none
+  ---
+  duration_ms: 11.29141
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair=() nested=bm
+ok 21 - pd wrapped=true pair=() nested=bm
+  ---
+  duration_ms: 13.364943
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair=() nested=hat
+ok 22 - pd wrapped=true pair=() nested=hat
+  ---
+  duration_ms: 16.654924
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair=[] nested=none
+ok 23 - pd wrapped=true pair=[] nested=none
+  ---
+  duration_ms: 12.330393
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair=[] nested=bm
+ok 24 - pd wrapped=true pair=[] nested=bm
+  ---
+  duration_ms: 16.228657
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair=[] nested=hat
+ok 25 - pd wrapped=true pair=[] nested=hat
+  ---
+  duration_ms: 12.613319
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair={} nested=none
+ok 26 - pd wrapped=true pair={} nested=none
+  ---
+  duration_ms: 9.403566
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair={} nested=bm
+ok 27 - pd wrapped=true pair={} nested=bm
+  ---
+  duration_ms: 16.681198
+  type: 'test'
+  ...
+# Subtest: pd wrapped=true pair={} nested=hat
+ok 28 - pd wrapped=true pair={} nested=hat
+  ---
+  duration_ms: 12.913998
+  type: 'test'
+  ...
+# Subtest: manual pair ()
+ok 29 - manual pair ()
+  ---
+  duration_ms: 11.933772
+  type: 'test'
+  ...
+# Subtest: manual pair []
+ok 30 - manual pair []
+  ---
+  duration_ms: 10.224134
+  type: 'test'
+  ...
+# Subtest: manual pair {}
+ok 31 - manual pair {}
+  ---
+  duration_ms: 10.240422
+  type: 'test'
+  ...
+# Subtest: generic argument literal prefix/suffix ${2:y}
+ok 32 - generic argument literal prefix/suffix ${2:y}
+  ---
+  duration_ms: 10.849413
+  type: 'test'
+  ...
+# Subtest: generic argument literal prefix/suffix ${2}
+ok 33 - generic argument literal prefix/suffix ${2}
+  ---
+  duration_ms: 14.428217
+  type: 'test'
+  ...
+# Subtest: 40 typed nesting levels do not create extra native groups
+ok 34 - 40 typed nesting levels do not create extra native groups
+  ---
+  duration_ms: 52.500915
+  type: 'test'
+  ...
+# Subtest: coincident continuation and final fields do not cost an extra Tab
+ok 35 - coincident continuation and final fields do not cost an extra Tab
+  ---
+  duration_ms: 11.766595
+  type: 'test'
+  ...
+# Subtest: subscript inner brace before fraction denominator
+ok 36 - subscript inner brace before fraction denominator
+  ---
+  duration_ms: 6.410401
+  type: 'test'
+  ...
+# Subtest: typed adjacent braces are not mistaken for native command arguments
+ok 37 - typed adjacent braces are not mistaken for native command arguments
+  ---
+  duration_ms: 4.460238
+  type: 'test'
+  ...
+# Subtest: snippet-owned left/right pair uses native continuation
+ok 38 - snippet-owned left/right pair uses native continuation
+  ---
+  duration_ms: 10.226529
+  type: 'test'
+  ...
+# Subtest: typed closer before a following literal expression stops at one token
+ok 39 - typed closer before a following literal expression stops at one token
+  ---
+  duration_ms: 6.029048
+  type: 'test'
+  ...
+# Subtest: prefix expansion on compact line 99
+ok 40 - prefix expansion on compact line 99
+  ---
+  duration_ms: 2.717187
+  type: 'test'
+  ...
+# Subtest: prefix expansion on compact line 100
+ok 41 - prefix expansion on compact line 100
+  ---
+  duration_ms: 2.225134
+  type: 'test'
+  ...
+# Subtest: prefix expansion on compact line 101
+ok 42 - prefix expansion on compact line 101
+  ---
+  duration_ms: 8.645375
+  type: 'test'
+  ...
+# Subtest: prefix expansion on compact line 250
+ok 43 - prefix expansion on compact line 250
+  ---
+  duration_ms: 8.979387
+  type: 'test'
+  ...
+# Subtest: prefix expansion on compact line 1000
+ok 44 - prefix expansion on compact line 1000
+  ---
+  duration_ms: 9.535149
+  type: 'test'
+  ...
+# Subtest: unmatched long prefix leaves no probe whitespace
+ok 45 - unmatched long prefix leaves no probe whitespace
+  ---
+  duration_ms: 10.819988
+  type: 'test'
+  ...
+# Subtest: long-prefix recovery off falls back to ordinary Tab
+ok 46 - long-prefix recovery off falls back to ordinary Tab
+  ---
+  duration_ms: 2.487317
+  type: 'test'
+  ...
+# Subtest: native session survives nested long-line prefix expansion
+ok 47 - native session survives nested long-line prefix expansion
+  ---
+  duration_ms: 28.827809
+  type: 'test'
+  ...
+# Subtest: Space semantics terminal
+ok 48 - Space semantics terminal
+  ---
+  duration_ms: 9.856597
+  type: 'test'
+  ...
+# Subtest: Space semantics earlier
+ok 49 - Space semantics earlier
+  ---
+  duration_ms: 5.08422
+  type: 'test'
+  ...
+# Subtest: Space semantics nonterminal closer
+ok 50 - Space semantics nonterminal closer
+  ---
+  duration_ms: 4.200676
+  type: 'test'
+  ...
+# Subtest: Space replaces an edited/reselected default
+ok 51 - Space replaces an edited/reselected default
+  ---
+  duration_ms: 4.279896
+  type: 'test'
+  ...
+# Subtest: Space replaces a plain manual selection
+ok 52 - Space replaces a plain manual selection
+  ---
+  duration_ms: 1.894358
+  type: 'test'
+  ...
+# Subtest: plain block ["\\n",false]
+ok 53 - plain block ["\\n",false]
+  ---
+  duration_ms: 2.082534
+  type: 'test'
+  ...
+# Subtest: plain block ["\\n",true]
+ok 54 - plain block ["\\n",true]
+  ---
+  duration_ms: 7.10681
+  type: 'test'
+  ...
+# Subtest: plain block ["\\r\\n",false]
+ok 55 - plain block ["\\r\\n",false]
+  ---
+  duration_ms: 2.584254
+  type: 'test'
+  ...
+# Subtest: plain block ["\\r\\n",true]
+ok 56 - plain block ["\\r\\n",true]
+  ---
+  duration_ms: 4.634588
+  type: 'test'
+  ...
+# Subtest: inline block closer stop is normalized to a new physical line
+ok 57 - inline block closer stop is normalized to a new physical line
+  ---
+  duration_ms: 8.624031
+  type: 'test'
+  ...
+# Subtest: block exit config off remains after closer
+ok 58 - block exit config off remains after closer
+  ---
+  duration_ms: 2.906708
+  type: 'test'
+  ...
+# Subtest: plain sequential recovery remains generic
+ok 59 - plain sequential recovery remains generic
+  ---
+  duration_ms: 2.486641
+  type: 'test'
+  ...
+# Subtest: sequential native argument without a field does not rewind or guess
+ok 60 - sequential native argument without a field does not rewind or guess
+  ---
+  duration_ms: 8.208327
+  type: 'test'
+  ...
+# Subtest: queued Tab commands are ordered
+ok 61 - queued Tab commands are ordered
+  ---
+  duration_ms: 13.054886
+  type: 'test'
+  ...
+# Subtest: queued command is abandoned after focus change
+ok 62 - queued command is abandoned after focus change
+  ---
+  duration_ms: 4.13436
+  type: 'test'
+  ...
+# Subtest: rejected identity edit never falls through to outer dm $0
+ok 63 - rejected identity edit never falls through to outer dm $0
+  ---
+  duration_ms: 7.486109
+  type: 'test'
+  ...
+# Subtest: concurrent typing is not overwritten by a snapshot restore
+ok 64 - concurrent typing is not overwritten by a snapshot restore
+  ---
+  duration_ms: 9.112044
+  type: 'test'
+  ...
+# Subtest: multi-selection navigation delegates without collapsing cursors
+ok 65 - multi-selection navigation delegates without collapsing cursors
+  ---
+  duration_ms: 5.715238
+  type: 'test'
+  ...
+# Subtest: unicode context keeps UTF-16 offsets consistent
+ok 66 - unicode context keeps UTF-16 offsets consistent
+  ---
+  duration_ms: 6.926399
+  type: 'test'
+  ...
+# Subtest: nested display exit keeps an outer following field alive
+ok 67 - nested display exit keeps an outer following field alive
+  ---
+  duration_ms: 9.975674
+  type: 'test'
+  ...
+# Subtest: comments do not terminate a sequential argument early
+ok 68 - comments do not terminate a sequential argument early
+  ---
+  duration_ms: 7.691748
+  type: 'test'
+  ...
+# Subtest: focus change during long-prefix probe still removes only its temporary space
+ok 69 - focus change during long-prefix probe still removes only its temporary space
+  ---
+  duration_ms: 6.70235
+  type: 'test'
+  ...
+# Subtest: nested sum plus bar reaches denominator without hidden final stops
+ok 70 - nested sum plus bar reaches denominator without hidden final stops
+  ---
+  duration_ms: 24.593844
+  type: 'test'
+  ...
+# Subtest: ordinary derivative with command-bearing denominator preserves only its field
+ok 71 - ordinary derivative with command-bearing denominator preserves only its field
+  ---
+  duration_ms: 14.0442
+  type: 'test'
+  ...
+# Subtest: continued typing after a snippet closer does not erase its ownership
+ok 72 - continued typing after a snippet closer does not erase its ownership
+  ---
+  duration_ms: 12.461411
+  type: 'test'
+  ...
+1..72
+# tests 72
+# suites 0
+# pass 72
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 813.103088

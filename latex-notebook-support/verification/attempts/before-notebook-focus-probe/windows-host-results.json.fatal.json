@@ -1,0 +1,4 @@
+{
+  "actualExtensionHost": true,
+  "error": "Error: Host acceptance suite did not pass completely; inspect C:\\Users\\p1072\\AppData\\Local\\Temp\\latex-notebook-host-db721d07999946b4a46eba54126ddc4e\\reports\\windows-host-results.json\n\tat run (c:\\Users\\p1072\\AppData\\Local\\Temp\\latex-notebook-host-db721d07999946b4a46eba54126ddc4e\\extension\\test\\host-entry.js:36:106)\n\tat async exports.run (c:\\Users\\p1072\\AppData\\Local\\Temp\\latex-notebook-host-db721d07999946b4a46eba54126ddc4e\\extension\\test\\host-entry.js:39:14)"
+}

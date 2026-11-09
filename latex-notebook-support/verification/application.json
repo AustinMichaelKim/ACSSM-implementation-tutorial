@@ -1,0 +1,35 @@
+{
+  "mode": "apply",
+  "addedNotebookBindings": 9,
+  "texOnlyBindings": [
+    {
+      "key": "ctrl+b",
+      "command": "latex-workshop.build",
+      "reason": "TeX build"
+    },
+    {
+      "key": "ctrl+b",
+      "command": "latex-workshop.build",
+      "reason": "TeX build"
+    },
+    {
+      "key": "ctrl+d ctrl+s",
+      "command": "editor.action.insertSnippet",
+      "reason": "Full TeX document template"
+    }
+  ],
+  "snippets": 69,
+  "snippetSource": "/mnt/c/Users/p1072/AppData/Roaming/Code/User/snippets/latex.json",
+  "changed": [
+    {
+      "path": "/mnt/c/Users/p1072/AppData/Roaming/Code/User/keybindings.json",
+      "backup": "/home/minseok/paper_implementation/ACSSM_implementation/latex-notebook-support/backups/apply-20261109T011330Z/keybindings.json",
+      "sha256": "4766c1250a3f8760e0a561a9b3341601e4c6f29ad464e802eae020692b8cf5b8"
+    },
+    {
+      "path": "/home/minseok/.vscode-server/data/Machine/settings.json",
+      "backup": "/home/minseok/paper_implementation/ACSSM_implementation/latex-notebook-support/backups/apply-20261109T011330Z/wsl-settings.json",
+      "sha256": "39494291a039d8f0daee7ba2672cfbd35cd1fe196bf58fcf7815e4fb845cca1e"
+    }
+  ]
+}

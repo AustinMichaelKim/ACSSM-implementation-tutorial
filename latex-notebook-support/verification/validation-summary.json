@@ -1,0 +1,72 @@
+{
+  "baselineUnitModel": {
+    "tests": 119,
+    "passed": 119,
+    "report": "baseline-direct.tap"
+  },
+  "modifiedUnitModel": {
+    "tests": 147,
+    "passed": 147,
+    "report": "final-direct-tests.tap"
+  },
+  "realWindowsTexHost": {
+    "actualExtensionHost": true,
+    "physicalTabTest": false,
+    "vscodeVersion": "1.145.2",
+    "extensionVersion": "0.4.0",
+    "passed": 42,
+    "failed": 0,
+    "skipped": 0,
+    "total": 42,
+    "aborted": false
+  },
+  "realWindowsNotebookLatest": {
+    "actualExtensionHost": true,
+    "physicalKeyboard": false,
+    "vscodeVersion": "1.145.2",
+    "extensionVersion": "0.4.0",
+    "passed": 3,
+    "failed": 0,
+    "skipped": 9,
+    "total": 12,
+    "startup": {
+      "notebookOpenedBeforeTex": true,
+      "activeWithoutExplicitActivate": true
+    }
+  },
+  "realWindowsNotebookBestBehaviorRun": {
+    "report": "attempts/before-first-insert-focus/windows-notebook-host-results.json",
+    "passed": 11,
+    "failed": 1,
+    "total": 12,
+    "onlyFailedCase": "notebook-only-startup-and-display-prefix-outside-math",
+    "failureReason": "Test oracle required LF; actual wrapper expanded correctly with CRLF. Test oracle corrected; latest run passes this case."
+  },
+  "notebookCasesObservedPassingAcrossAttempts": [
+    "code-cell-excluded-latex",
+    "code-cell-excluded-python",
+    "dm-L-theta-prefix-stays-inside-display",
+    "language-change-clears-notebook-target",
+    "named-latex-snippet-in-markdown",
+    "native-mirrored-placeholder-and-variable-transform",
+    "notebook-only-startup-and-display-prefix-outside-math",
+    "pd-exact-x-selection-()",
+    "pd-exact-x-selection-[]",
+    "pd-exact-x-selection-{}",
+    "selected-text-wrapper-uses-native-variable",
+    "undo-redo-after-notebook-prefix"
+  ],
+  "singleCleanNotebookRun": false,
+  "physicalKeyboard": {
+    "executed": false,
+    "manualFixture": "../manual/notebook-markdown-regression.ipynb"
+  },
+  "scope": "Windows local desktop Extension Host uses a development copy. WSL installed host UI and actual keyboard routing remain manual.",
+  "notes": [
+    "Prior no-op typing attempts were harness focus failures, not feature regressions.",
+    "Final .tex suite uses a disposable typing focus probe and native Undo before every fixture.",
+    "Notebook focus probes remained unreliable; skipped cases do not count as passes.",
+    "Every Notebook behavioral case has a passing API observation across attempts, but no single fully passing Notebook run is claimed.",
+    "OS window foreground was acquired, but physical keys were not sent."
+  ]
+}
